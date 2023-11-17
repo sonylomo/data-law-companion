@@ -1,4 +1,3 @@
-import React from "react";
 import Caroussel from "../../../components/aboutUs/Caroussel";
 import {TeamData} from "../../../components/aboutUs/teamData.ts";
 

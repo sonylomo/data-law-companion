@@ -1,8 +1,8 @@
-import React from "react";
 import person from "../../../assets/person.jpeg";
 import jkuat from "../../../assets/jkuat-logo.png";
+import { ProfileCardProps } from "../../../types";
 
-const FundingCard = ({ image, company, name }) => {
+const FundingCard = ({ image, company, name }: ProfileCardProps) => {
   return (
     <div className="flex gap-4 items-center">
       <img src={image} alt={name} className="rounded-full w-16" />

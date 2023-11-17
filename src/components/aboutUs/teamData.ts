@@ -1,6 +1,7 @@
 import profile from "../../assets/person.jpeg";
+import { CarousselProps } from "../../types";
 
-export const TeamData = [
+export const TeamData: CarousselProps[] = [
   {
     name: "Dr. Lawrence Nderu",
     title: "Principal Investigator",

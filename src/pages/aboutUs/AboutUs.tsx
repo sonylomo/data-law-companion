@@ -1,4 +1,3 @@
-import React from "react";
 import AboutUsHero from "../aboutUs/sections/Hero";
 import Team from "../aboutUs/sections/Team";
 import Funding from "../aboutUs/sections/Funding";
