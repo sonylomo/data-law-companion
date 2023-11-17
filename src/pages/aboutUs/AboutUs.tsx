@@ -1,12 +1,16 @@
-import React from 'react'
-import AboutUsHero from '../aboutUs/sections/Hero';
+import React from "react";
+import AboutUsHero from "../aboutUs/sections/Hero";
+import Team from "../aboutUs/sections/Team";
+import Funding from "../aboutUs/sections/Funding";
 
 const AboutUs = () => {
   return (
     <div>
-      <AboutUsHero/>
+      <AboutUsHero />
+      <Team />
+      <Funding />
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;
