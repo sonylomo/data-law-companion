@@ -23,7 +23,7 @@ const Caroussel = ({ CarousselData }) => {
             />
             <div className="absolute -translate-x-2/4 -translate-y-1/4 left-2/4 top-3/4 text-white text-center z-10 font-medium w-4/5">
               <p className="pb-2 text-xl">{name}</p>
-              <p className="text-base">{title}</p>
+              <p className="text-base font-light">{title}</p>
             </div>
           </div>
         ))}

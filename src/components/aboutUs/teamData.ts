@@ -2,53 +2,53 @@ import profile from "../../assets/person.jpeg";
 
 export const TeamData = [
   {
-    name: "Fred Ouko",
-    title: "Founder",
+    name: "Dr. Lawrence Nderu",
+    title: "Principal Investigator",
     image: profile,
   },
   {
-    name: "Catherine Kiiru",
-    title: "Dev Relations & Opensource Programs",
+    name: "Dorcas Mwigereri",
+    title: "Co-Investigator",
     image: profile,
   },
   {
-    name: "James Otieno",
-    title: "Community Manager",
+    name: "Felista Mogire",
+    title: "Project Administrator",
     image: profile,
   },
   {
-    name: "Hudson Obai",
-    title: "Head of Engineering",
+    name: "John Michael Rono",
+    title: "LLM Algorithm Developer",
     image: profile,
   },
   {
-    name: "Ian Mugenya",
-    title: "Mentorship Program Lead",
+    name: "Daniel Muiruri",
+    title: "LLM Algorithm Developer",
     image: profile,
   },
   {
-    name: "Marlyn Mayienga",
-    title: "Program Manager",
+    name: "Millicent Shiatikha",
+    title: "Chatbot Developer",
     image: profile,
   },
   {
-    name: "Sharon Jebitok",
-    title: "Head of Chapters and Volunteers",
+    name: "Derrick Obwatsa",
+    title: "Web Developer",
     image: profile,
   },
   {
-    name: "Waithaka Waweru",
-    title: "Dev Relations and Events",
+    name: "Elvis Swanya",
+    title: "Web Developer",
     image: profile,
   },
   {
-    name: "Juma Lawrence",
-    title: "Head of Communication",
+    name: "Sonia Lomo",
+    title: "Mobile Developer",
     image: profile,
   },
   {
-    name: "Racheal Murabula",
-    title: "Lead Android Engineer",
+    name: "Florence Njau",
+    title: "Data Protection Act & AI",
     image: profile,
   },
 ];

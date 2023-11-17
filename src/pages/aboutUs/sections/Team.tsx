@@ -4,8 +4,8 @@ import {TeamData} from "../../../components/aboutUs/teamData.ts";
 
 const Team = () => {
   return (
-    <div className="mt-72">
-      <h2 className="font-bold text-4xl text-center">Meet the Team</h2>
+    <div className="pt-6 mt-[25rem] sm:mt-72 bg-neutral-grey">
+      <h2 className="font-bold text-2xl sm:text-4xl text-center">Meet the Team</h2>
       <Caroussel CarousselData={TeamData} />
     </div>
   );
