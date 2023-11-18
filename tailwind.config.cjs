@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         "neutral-orange": "#D4802E",
+        "pale-orange":"#FFFAED",
         "neutral-red": "#990000",
         "dark-grey":"#3E3E4C",
         "light-grey": "#696A78",
