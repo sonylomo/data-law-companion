@@ -9,7 +9,7 @@ const AboutUsHero = () => {
           backgroundImage: `linear-gradient(to right, rgba(241, 163, 64, 0.6), rgba(0, 0, 0, 0.8)),url(${banner})`,
         }}
       >
-        <h1 className="uppercase text-3xl sm:text-5xl font-bold ">
+        <h1 className="uppercase text-3xl sm:text-5xl font-bold">
           Your Awareness is Our Priority
         </h1>
         <p className="text-lg sm:text-xl">
