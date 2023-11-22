@@ -3,8 +3,8 @@ import Home from "../pages/Home";
 import Layout from "../components/Layout";
 import AboutUs from "../pages/aboutUs/AboutUs";
 import Compliance from "../pages/compliance/Compliance";
-import Resources from "../pages/resources/Resources";
-import PageNotFound from "../pages/PageNotFound";
+import News from "../pages/news/News";
+import CaseStudies from "../pages/caseStudies/CaseStudies";
 
 export const router = createBrowserRouter([
   {
@@ -24,8 +24,12 @@ export const router = createBrowserRouter([
         element: <Compliance />,
       },
       {
-        path: "/resources",
-        element: <Resources />,
+        path: "/news",
+        element: <News />,
+      },
+      {
+        path: "/case-studies",
+        element: <CaseStudies />,
       },
     ],
   },
