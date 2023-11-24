@@ -1,15 +1,14 @@
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { NewsData } from "../../types";
+
+type HeroCardPropsType = {
+  HeroCardProps: NewsData;
+};
 
 const HeroCard = ({
-  HeroCardProps: {
-    banner,
-    title,
-    id,
-    subheading,
-    body,
-  },
-}) => {
+  HeroCardProps: { banner, title, id, subheading, body },
+}: HeroCardPropsType) => {
   const Truncate = (str: string) => {
     return str.substring(0, 200) + " ...";
   };
@@ -17,8 +16,12 @@ const HeroCard = ({
   return (
     <div className="flex flex-col sm:flex-row bg-pale-orange rounded-lg ml-0 sm:ml-4 my-4 justify-between py-4 shadow-lg">
       <div className="relative sm:mx-auto flex justify-center items-center mx-4">
-        <img src={banner} alt={title} className="w-full sm:w-64 h-40 sm:h-4/5 object-cover rounded" />
-        <div className="absolute inset-x-0 bg-black opacity-40 h-40 sm:h-4/5 rounded "/>
+        <img
+          src={banner}
+          alt={title}
+          className="w-full sm:w-64 h-40 sm:h-4/5 object-cover rounded"
+        />
+        <div className="absolute inset-x-0 bg-black opacity-40 h-40 sm:h-4/5 rounded " />
       </div>
 
       <div className="border-b sm:border-l border-[#9DA0AC] my-4 sm:my-10 mx-4 sm:mr-4" />
@@ -30,7 +33,9 @@ const HeroCard = ({
             {title} <BsArrowRight className="text-neutral-orange font-bold" />
           </h1>
         </Link>
-        <h2 className="text-xl sm:text-2xl font-medium text-dark-grey">{subheading}</h2>
+        <h2 className="text-xl sm:text-2xl font-medium text-dark-grey">
+          {subheading}
+        </h2>
         <p className="text-base text-light-grey">{Truncate(body)}</p>
       </div>
     </div>

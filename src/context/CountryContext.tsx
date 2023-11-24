@@ -1,10 +1,5 @@
 import { useState, useEffect, createContext, type ReactNode } from "react";
-
-type CountryKey = {
-  code: string;
-  name: string;
-  flag: string;
-};
+import { CountryKey } from '../types';
 
 type CountryContextType = {
   country: CountryKey;
@@ -21,7 +16,7 @@ export const CountryContextProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [country, setCountry] = useState<CountryContextType>(() => {
+  const [country, setCountry] = useState<CountryKey>(() => {
     const token = localStorage.getItem("country");
     if (token) {
       return JSON.parse(localStorage.getItem("country") as string);

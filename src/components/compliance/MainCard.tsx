@@ -2,9 +2,14 @@ import { TiPlus, TiMinus } from "react-icons/ti";
 import { useState } from "react";
 import { DetailedComplianceIssuesChildren } from "../../types";
 import useCountry from "../../hooks/useCountry";
+import { CountryKey } from "../../types/index";
 
 type MainCardProps = {
   MainCardProps: DetailedComplianceIssuesChildren;
+};
+
+type UseCountryType = {
+  country: CountryKey;
 };
 
 const MainCard = ({
@@ -13,7 +18,7 @@ const MainCard = ({
   // const globalCountry = useContext(CountryContext) as CountryKey;
   const {
     country: { name, flag },
-  } = useCountry();
+  } = useCountry() as UseCountryType;
   const [isExpanded, setIsExpanded] = useState(false);
 
   const Truncate = (str: string) => {
@@ -24,7 +29,7 @@ const MainCard = ({
     <>
       {country[name]?.description && (
         <div
-          className=" flex flex-col justify-between shadow-lg rounded-xl bg-white py-12 px-6 hover:cursor-pointer hover:border hover:border-neutral-red md:w-80 lg:w-96"
+          className="flex flex-col justify-between shadow-lg rounded-xl bg-white py-12 px-6 hover:cursor-pointer hover:border hover:border-neutral-red md:w-80 lg:w-96"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <div>

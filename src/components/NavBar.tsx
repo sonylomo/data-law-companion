@@ -1,9 +1,8 @@
-import { useState, useContext, Fragment, useEffect } from "react";
+import { useState, Fragment, useEffect } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import logo from "../assets/react.svg";
 import { CgMenu } from "react-icons/cg";
-import { CountryKey } from "../types";
 import { HiOutlineChevronUpDown } from "react-icons/hi2";
 import { BsCheck } from "react-icons/bs";
 import useCountry from "../hooks/useCountry";

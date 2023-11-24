@@ -1,9 +1,9 @@
-import React from "react";
 import HeroCard from "../../components/news/HeroCard";
 import bannerImg from "../../assets/handshake.png";
 import NewsCard from "../../components/news/NewsCard";
+import { NewsData as NewsDataType } from "../../types/index";
 
-const NewsData = [
+const NewsData: NewsDataType[] = [
   {
     banner: bannerImg,
     title: "Got some news for you",
@@ -42,10 +42,10 @@ const News = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-4 pt-4 pb-16 h-auto">
       <div className="max-w-screen-lg mx-auto">
-      <h1 className="uppercase text-2xl sm:text-3xl font-semibold">
-        Latest NEWS
-      </h1>
-      <HeroCard HeroCardProps={NewsData[0]} />
+        <h1 className="uppercase text-2xl sm:text-3xl font-semibold">
+          Latest NEWS
+        </h1>
+        <HeroCard HeroCardProps={NewsData[0]} />
       </div>
 
       {/* search */}

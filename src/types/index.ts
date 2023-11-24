@@ -13,7 +13,12 @@ export type CarousselProps = {
 };
 
 // Compliance Issues
-export type CountryKey = "rwanda" | "uganda" | "kenya";
+export type CountrySelect = "rwanda" | "uganda" | "kenya";
+export type CountryKey = {
+  code: string;
+  name: CountrySelect;
+  flag: string;
+};
 
 export interface CountryInfo {
   description: string;
@@ -24,7 +29,7 @@ export interface DetailedComplianceIssuesChildren {
   id: number;
   icon: JSX.Element;
   title: string;
-  country: Partial<Record<CountryKey, CountryInfo>>;
+  country: Partial<Record<CountrySelect, CountryInfo>>;
 }
 
 export type DetailedComplianceIssuesData = {
@@ -39,4 +44,14 @@ export type ComplianceIssuesData = {
   icon: JSX.Element;
   title: string;
   description: string;
+};
+
+// news
+
+export type NewsData = {
+  banner: string;
+  title: string;
+  id: number;
+  subheading: string;
+  body: string;
 };

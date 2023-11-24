@@ -1,7 +1,13 @@
-import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { NewsData } from "../../types";
 
-const NewsCard = ({ NewsCardProps: { banner, title, id, subheading } }) => {
+type NewsCardPropsType = {
+  NewsCardProps: Omit<NewsData, "body">;
+};
+
+const NewsCard = ({
+  NewsCardProps: { banner, title, id, subheading },
+}: NewsCardPropsType) => {
   return (
     <div className="md:w-80 xl:w-96 hover:shadow-none hover:border hover:border-neutral-red shadow-lg rounded-xl bg-pale-orange">
       <a href={`#${id}`} className="hover:cursor-pointer space-y-3">
