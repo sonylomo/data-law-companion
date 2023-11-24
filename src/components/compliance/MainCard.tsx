@@ -1,53 +1,46 @@
 import { TiPlus, TiMinus } from "react-icons/ti";
-import { useState, useContext, useEffect } from "react";
-import { CountryContext } from "../../utils/Context";
-import { DetailedComplianceIssuesChildren, CountryKey } from "../../types";
+import { useState } from "react";
+import { DetailedComplianceIssuesChildren } from "../../types";
+import useCountry from "../../hooks/useCountry";
+import { CountryKey } from "../../types/index";
 
 type MainCardProps = {
   MainCardProps: DetailedComplianceIssuesChildren;
 };
 
+type UseCountryType = {
+  country: CountryKey;
+};
+
 const MainCard = ({
   MainCardProps: { icon, title, country },
 }: MainCardProps) => {
-  const globalCountry = useContext(CountryContext) as CountryKey;
+  // const globalCountry = useContext(CountryContext) as CountryKey;
+  const {
+    country: { name, flag },
+  } = useCountry() as UseCountryType;
   const [isExpanded, setIsExpanded] = useState(false);
-  const [CountryFlag, setCountryFlag] = useState("KE");
 
   const Truncate = (str: string) => {
     return !isExpanded ? str.substring(0, 100) + " ..." : str;
   };
 
-  const getCountryCode = () => {
-    if (globalCountry === "kenya") {
-      setCountryFlag("🇰🇪");
-    } else if (globalCountry === "uganda") {
-      setCountryFlag("🇺🇬");
-    } else if (globalCountry === "rwanda") {
-      setCountryFlag("🇷🇼");
-    }
-  };
-
-  useEffect(() => {
-    getCountryCode();
-  }, [globalCountry]);
-
   return (
     <>
-      {country[globalCountry]?.description && (
+      {country[name]?.description && (
         <div
-          className=" flex flex-col justify-between shadow-lg rounded-xl bg-white py-12 px-6 hover:cursor-pointer hover:border hover:border-neutral-red md:w-80 lg:w-96"
+          className="flex flex-col justify-between shadow-lg rounded-xl bg-white py-12 px-6 hover:cursor-pointer hover:border hover:border-neutral-red md:w-80 lg:w-96"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <div>
             {icon}
             <h3 className="font-medium text-neutral-red text-xl sm:text-2xl my-4">
               {title}
-              <span> {CountryFlag}</span>
+              <span> {flag}</span>
             </h3>
-            <p>{Truncate(country[globalCountry]!.description)}</p>
+            <p>{Truncate(country[name]!.description)}</p>
             <div className="flex gap-2 mt-2">
-              {country[globalCountry]?.tags?.map((tag: string) => {
+              {country[name]?.tags?.map((tag: string) => {
                 return (
                   <p
                     key={crypto.randomUUID()}

@@ -1,13 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
-import Layout from '../components/Layout';
-import AboutUs from '../pages/aboutUs/AboutUs';
-import Compliance from '../pages/compliance/Compliance';
+import Layout from "../components/Layout";
+import AboutUs from "../pages/aboutUs/AboutUs";
+import Compliance from "../pages/compliance/Compliance";
+import News from "../pages/news/News";
+import CaseStudies from "../pages/caseStudies/CaseStudies";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
+    element: <Layout />,
     children: [
       {
         path: "/",
@@ -21,10 +23,14 @@ export const router = createBrowserRouter([
         path: "/compliance-issues",
         element: <Compliance />,
       },
-      // {
-      //   path:"/resources",
-      //   element:<Resources/>
-      // }
+      {
+        path: "/news",
+        element: <News />,
+      },
+      {
+        path: "/case-studies",
+        element: <CaseStudies />,
+      },
     ],
   },
 ]);

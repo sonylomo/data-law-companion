@@ -2,23 +2,13 @@ import ComplianceBanner from "../../assets/compliance/compliance-banner-5.png";
 import ComplianceCard from "../../components/compliance/ComplianceCard";
 import MainCard from "../../components/compliance/MainCard";
 import { BsArrowRight } from "react-icons/bs";
-// import ExpandCard from "../../components/compliance/ExpandCard";
-// import { CountryContext } from "../../utils/Context";
-// import { useContext } from "react";
 import {
-  // ComplianceIssuesData1,
-  // ComplianceIssuesData2,
-  // ComplianceIssuesData3,
-  // AllComplianceIssuesData
   ComplianceIssuesData11,
   ComplianceIssuesData22,
   DetailedComplianceIssuesData,
 } from "../../components/compliance/ComplianceIssuesData";
 
 const Compliance = () => {
-  //   const globalCountry = useContext(CountryContext);
-
-  // console.log(DetailedComplianceIssuesData[0].country[globalCountry].description);
   return (
     <>
       {/* Hero */}
