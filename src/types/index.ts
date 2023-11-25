@@ -1,5 +1,12 @@
-// About Us
+// Home Page
+export type FeaturedData ={
+  tag: string;
+  title: string;
+  date: string;
+  link: string;
+}
 
+// About Us
 export type ProfileCardProps = {
   image: string;
   company: string;
@@ -47,7 +54,6 @@ export type ComplianceIssuesData = {
 };
 
 // news
-
 export type NewsData = {
   banner: string;
   title: string;
