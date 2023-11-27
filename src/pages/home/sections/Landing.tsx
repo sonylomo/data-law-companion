@@ -1,7 +1,7 @@
 import landing from "../../../assets/home/nairobi.jpg";
 import LandingCard from "../../../components/home/LandingCard";
 import Sample from "../../../assets/home/moving.jpg";
-import LandingImg from "../../../assets/home/tree.jpg"
+// import LandingImg from "../../../assets/home/tree.jpg"
 
 const LandingCardData = [
   {
@@ -10,18 +10,23 @@ const LandingCardData = [
     buttonText: "View All Services",
     // image: "https://source.unsplash.com/random/400x400",
     image: Sample,
+    link:"#"
   },
   {
     cardTitle: "Q&A",
     cardBody: " Lorem ipsum dolor sit amet, #brands.",
     buttonText: "View All Services",
     image: Sample,
+    link:"#"
+
   },
   {
     cardTitle: "Compliance Issues",
     cardBody: " Lorem ipsum dolor sit amet, #brands.",
     buttonText: "View All Services",
     image: Sample,
+    link:"#"
+
   },
 ];
 

@@ -1,9 +1,18 @@
+import { LandingCardData } from "../../types";
+
+type LandingCardProps = {
+  LandingCard: LandingCardData;
+};
+
 const LandingCard = ({
-  LandingCard: { cardTitle, cardBody, buttonText, image },
-}) => {
+  LandingCard: { cardTitle, cardBody, buttonText, image, link },
+}: LandingCardProps) => {
   return (
     <div className="w-96 h-80 rounded-md">
-      <a href="#" className="shadow-2xl relative rounded-md">
+      <a
+        href={`${link}`}
+        className="shadow-2xl relative rounded-md hover:cursor-pointer"
+      >
         <div className="h-full relative shadow-2xl overflow-hidden group ">
           <div className="absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)] transition-all ease-in-out duration-500 rounded-md">
             <div className="w-full h-full p-5 relative">

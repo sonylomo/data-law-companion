@@ -2,13 +2,15 @@
 import Featured from "./sections/Featured";
 import FAQ from "./sections/FAQ";
 import CTA from "./sections/CTA";
-import Landing from './sections/Landing';
+import Landing from "./sections/Landing";
+import CountryCard from "./sections/CountryCard";
 
 const Home = () => {
   return (
     <div className=" h-full mx-auto ">
       {/* <SlideShow /> */}
-     <Landing/>
+      <Landing />
+      <CountryCard />
       <Featured />
       <FAQ />
       <CTA />

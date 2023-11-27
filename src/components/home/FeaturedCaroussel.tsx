@@ -19,7 +19,7 @@ const FeaturedCaroussel = ({
           gridAutoColumns: "max-content",
         }}
       >
-        {FeaturedCarousselData.map(({ date, title, tag }: CarousselProps) => (
+        {FeaturedCarousselData.map(({ date, title, tag }) => (
           <a href="#" className="hover:cursor-pointer">
             <div
               key={crypto.randomUUID()}

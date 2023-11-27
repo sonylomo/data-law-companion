@@ -1,10 +1,18 @@
 // Home Page
-export type FeaturedData ={
+export type FeaturedData = {
   tag: string;
   title: string;
   date: string;
   link: string;
-}
+};
+
+export type LandingCardData = {
+  cardTitle: string;
+  cardBody: string;
+  buttonText: string;
+  image: string;
+  link: string;
+};
 
 // About Us
 export type ProfileCardProps = {

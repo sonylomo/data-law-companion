@@ -12,7 +12,7 @@ const FAQ = () => {
         <div className="mx-auto w-full max-w-6xl">
           {FAQData.map(({ question, answer }, idx) => {
             return (
-              <Disclosure key={crypto.randomUUID()} className="h-20">
+              <Disclosure key={crypto.randomUUID()}>
                 {({ open }) => (
                   <>
                     <div className="my-1 py-1">
