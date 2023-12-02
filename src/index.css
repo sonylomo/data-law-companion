@@ -1,5 +1,5 @@
-/* @import url('https://fonts.cdnfonts.com/css/satoshi'); */
 @import url("https://fonts.cdnfonts.com/css/satoshi?styles=135009,135005,135007,135002,135000");
+@import url("https://fonts.cdnfonts.com/css/adobe-garamond-pro-2?styles=14659,29964");
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +10,18 @@
   font-family: "Satoshi", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+.landing-text {
+  font-family: "Adobe Garamond Pro", sans-serif;
+}
+
+.transparent-bg {
+  background-color: rgba(255, 255, 255, 0.1490196078);
+}
+
+.transparent-bg:hover {
+  background-color: rgba(212, 128, 46, 0.15);
 }
 
 * {
@@ -27,7 +39,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* Card transition */
 /* Card transition */
 .card-transition {
   display: block;
@@ -66,3 +77,30 @@
   color: #ffffff;
 }
 
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  color: white;
+  background: black;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
+}
