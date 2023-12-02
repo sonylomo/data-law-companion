@@ -19,7 +19,7 @@ const CountrySelector = () => {
   useEffect(() => {
     setCountry(selectedCountry);
   }, [selectedCountry]);
-  
+
   return (
     <Listbox value={selectedCountry} onChange={setSelectedCountry}>
       <div className="relative mt-1">
@@ -108,14 +108,9 @@ const NavBar = () => {
           to="/"
           onClick={() => setShowNavlinks(false)}
         >
-          Home
-        </Link>
-        <Link
-          className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
-          to="/data-protection-assistant"
-        >
           ✨ Data Protection Assistant
         </Link>
+
         <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/compliance-issues"
@@ -133,7 +128,7 @@ const NavBar = () => {
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/news"
         >
-          News
+          Blog
         </Link>
         <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
@@ -150,15 +145,8 @@ const NavBar = () => {
           className="text-dark-grey hover:text-neutral-orange hover:underline focus:text-neutral-orange focus:underline transition-all duration-300 cursor-pointer"
           to="/"
         >
-          Home
-        </Link>
-        <Link
-          className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
-          to="/data-protection-assistant"
-        >
           ✨ Data Protection Assistant
         </Link>
-
         <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/compliance-issues"
@@ -175,7 +163,7 @@ const NavBar = () => {
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/news"
         >
-          News
+          Blog
         </Link>
         <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"

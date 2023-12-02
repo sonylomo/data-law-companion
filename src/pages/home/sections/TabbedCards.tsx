@@ -4,74 +4,11 @@ import RwandaCOA from "../../../assets/countryCOA/rwandaCOA.png";
 import { Tab } from "@headlessui/react";
 import { useState } from "react";
 
-const classNames = (...classes) => {
+const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(" ");
 };
 
 const TabbedCountryCard = () => {
-  const [categories] = useState({
-    Kenya: [
-      {
-        id: 1,
-        title: "Does drinking coffee make you smarter?",
-        date: "5h ago",
-        commentCount: 5,
-        shareCount: 2,
-        name: "Kenya",
-        image: KenyaCOA,
-      },
-      {
-        id: 2,
-        title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
-        name: "Kenya",
-        image: KenyaCOA,
-      },
-    ],
-    Uganda: [
-      {
-        id: 1,
-        title: "Is tech making coffee better or worse?",
-        date: "Jan 7",
-        commentCount: 29,
-        shareCount: 16,
-        name: "Uganda",
-        image: UgandaCOA,
-      },
-      {
-        id: 2,
-        title: "The most innovative things happening in coffee",
-        date: "Mar 19",
-        commentCount: 24,
-        shareCount: 12,
-        name: "Uganda",
-        image: UgandaCOA,
-      },
-    ],
-    Rwanda: [
-      {
-        id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
-        date: "2d ago",
-        commentCount: 9,
-        shareCount: 5,
-        name: "Rwanda",
-        image: RwandaCOA,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: "4d ago",
-        commentCount: 1,
-        shareCount: 2,
-        name: "Rwanda",
-        image: RwandaCOA,
-      },
-    ],
-  });
-
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const CountryData = [
@@ -203,7 +140,7 @@ const TabbedCountryCard = () => {
               key={crypto.randomUUID()}
               className={classNames(
                 "flex items-center gap-6 w-full bg-neutral-grey shadow-lg h-36 p-4 rounded-md transition-all duration-500 ease-in-out",
-                `${selectedIndex === idx && "bg-orange-300"}`
+                `${selectedIndex === idx && "bg-pale-orange border border-orange-300"}`
               )}
             >
               <img
@@ -226,8 +163,8 @@ const TabbedCountryCard = () => {
           <Tab.Panel
             key={crypto.randomUUID()}
             className={classNames(
-              "bg-orange-300 shadow-lg rounded h-full py-8 px-6",
-              "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+              "bg-pale-orange shadow-lg rounded h-full py-8 px-6",
+              "ring-white/60 ring-offset-2 ring-offset-orange-300 focus:outline-none focus:ring-2  border border-orange-300"
             )}
           >
             <div className="flex flex-col justify-between h-full">

@@ -11,7 +11,7 @@ const FeaturedCaroussel = ({
   return (
     <section className="mx-auto w-full max-w-screen-2xl pl-4">
       <div
-        className="h-96 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 overflow-x-auto scrollbar-hide"
+        className="h-96 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 overflow-y-hidden scrollbar-hide"
         style={{
           gridTemplateColumns: "max-content",
           gridTemplateRows: "minmax(250px, 300px)",
@@ -20,11 +20,11 @@ const FeaturedCaroussel = ({
         }}
       >
         {FeaturedCarousselData.map(({ date, title, tag }) => (
-          <a href="#" className="hover:cursor-pointer">
-            <div
-              key={crypto.randomUUID()}
-              className="rounded overflow-y-auto relative after:block after:relative after:-mt-36 after:h-36 after:w-full after:content-[''] after:z-0 after:rounded-b after:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)]"
-            >
+          <div
+            key={crypto.randomUUID()}
+            className=" scrollbar-hide rounded overflow-y-hidden relative after:block after:relative after:-mt-36 after:h-36 after:w-full after:content-[''] after:z-0 after:rounded-b after:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)]"
+          >
+            <a href="#" className="hover:cursor-pointer">
               <img
                 className=" w-96 h-80 object-cover items-center"
                 src={sample}
@@ -36,8 +36,8 @@ const FeaturedCaroussel = ({
                 <p className="text-base">{date}</p>
                 <p className="underline pt-2">Read more</p>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         ))}
       </div>
     </section>

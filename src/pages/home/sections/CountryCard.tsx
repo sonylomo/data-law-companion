@@ -20,75 +20,75 @@ const CountryData = [
   },
 ];
 
-const TabbedCountryCard = () => {
-  const [categories] = useState({
-    Kenya: [
-      {
-        id: 1,
-        title: "Does drinking coffee make you smarter?",
-        date: "5h ago",
-        commentCount: 5,
-        shareCount: 2,
-        name: "Kenya",
-        image: KenyaCOA,
-      },
-      {
-        id: 2,
-        title: "So you've bought coffee... now what?",
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
-        name: "Kenya",
-        image: KenyaCOA,
-      },
-    ],
-    Uganda: [
-      {
-        id: 1,
-        title: "Is tech making coffee better or worse?",
-        date: "Jan 7",
-        commentCount: 29,
-        shareCount: 16,
-        name: "Uganda",
-        image: UgandaCOA,
-      },
-      {
-        id: 2,
-        title: "The most innovative things happening in coffee",
-        date: "Mar 19",
-        commentCount: 24,
-        shareCount: 12,
-        name: "Uganda",
-        image: UgandaCOA,
-      },
-    ],
-    Rwanda: [
-      {
-        id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
-        date: "2d ago",
-        commentCount: 9,
-        shareCount: 5,
-        name: "Rwanda",
-        image: RwandaCOA,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: "4d ago",
-        commentCount: 1,
-        shareCount: 2,
-        name: "Rwanda",
-        image: RwandaCOA,
-      },
-    ],
-  });
-};
+// const TabbedCountryCard = () => {
+  // const [categories] = useState({
+  //   Kenya: [
+  //     {
+  //       id: 1,
+  //       title: "Does drinking coffee make you smarter?",
+  //       date: "5h ago",
+  //       commentCount: 5,
+  //       shareCount: 2,
+  //       name: "Kenya",
+  //       image: KenyaCOA,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "So you've bought coffee... now what?",
+  //       date: "2h ago",
+  //       commentCount: 3,
+  //       shareCount: 2,
+  //       name: "Kenya",
+  //       image: KenyaCOA,
+  //     },
+  //   ],
+  //   Uganda: [
+  //     {
+  //       id: 1,
+  //       title: "Is tech making coffee better or worse?",
+  //       date: "Jan 7",
+  //       commentCount: 29,
+  //       shareCount: 16,
+  //       name: "Uganda",
+  //       image: UgandaCOA,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "The most innovative things happening in coffee",
+  //       date: "Mar 19",
+  //       commentCount: 24,
+  //       shareCount: 12,
+  //       name: "Uganda",
+  //       image: UgandaCOA,
+  //     },
+  //   ],
+  //   Rwanda: [
+  //     {
+  //       id: 1,
+  //       title: "Ask Me Anything: 10 answers to your questions about coffee",
+  //       date: "2d ago",
+  //       commentCount: 9,
+  //       shareCount: 5,
+  //       name: "Rwanda",
+  //       image: RwandaCOA,
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "The worst advice we've ever heard about coffee",
+  //       date: "4d ago",
+  //       commentCount: 1,
+  //       shareCount: 2,
+  //       name: "Rwanda",
+  //       image: RwandaCOA,
+  //     },
+  //   ],
+  // });
+// };
 
 const CountryCard = () => {
   return (
     <div className="flex flex-col sm:flex-row gap-6 justify-center mx-auto items-center mb-10 sm:mb-20 max-w-screen-xl">
-      {CountryData.map(({ name, image, link }) => {
+      {CountryData.map(({ name, image }) => {
         return (
           // <a href={link} rel="noopener noreferrer" target="_blank">
             <div
