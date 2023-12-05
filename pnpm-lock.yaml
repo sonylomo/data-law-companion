@@ -8,6 +8,9 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.7.17
     version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+  '@ibm-watson/assistant-web-chat-react':
+    specifier: ^1.1.1
+    version: 1.1.1(react-dom@18.2.0)(react@18.2.0)
   '@tanstack/react-query':
     specifier: ^5.8.3
     version: 5.8.3(react-dom@18.2.0)(react@18.2.0)
@@ -1574,6 +1577,17 @@ packages:
   /@humanwhocodes/object-schema@2.0.1:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
+
+  /@ibm-watson/assistant-web-chat-react@1.1.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-iSYyxN2ez8xoGYHAUOAEotY7sMFIbG81uYtZ5iAYI4loivIzXhLa22fQT/fxToqnmmzXJosTGcZPgJxCANI4tg==}
+    engines: {node: '>=14', npm: '>=6'}
+    peerDependencies:
+      react: '>= 16.8.0'
+      react-dom: '>= 16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}

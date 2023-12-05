@@ -3,6 +3,23 @@ import LandingCard from "../../../components/home/LandingCard";
 import Sample from "../../../assets/home/moving.jpg";
 // import LandingImg from "../../../assets/home/tree.jpg"
 import { BsArrowRight } from "react-icons/bs";
+import {
+  WebChatContainer,
+  setEnableDebug,
+} from "@ibm-watson/assistant-web-chat-react";
+
+const webChatOptions = {
+  integrationID: "db26a3d9-a552-4793-8587-b6a9e9b1093d",
+  region: "au-syd",
+  serviceInstanceID: "0d36f010-ce52-4433-9e53-8e18218a3869",
+  // subscriptionID: 'only on enterprise plans',
+  // Note that there is no onLoad property here. The WebChatContainer component will override it.
+  // Use the onBeforeRender or onAfterRender prop instead.
+};
+
+// Include this if you want to get debugging information from this library. Note this is different than
+// the web chat "debug: true" configuration option which enables debugging within web chat.
+setEnableDebug(true);
 
 const LandingCardData = [
   {
@@ -49,12 +66,21 @@ const Landing = () => {
             {/* <button className="py-2 px-6 rounded-md border border-neutral-orange transparent-bg w-48">
               Data Protection Summarizer
             </button> */}
-               <a
+            <a
               className="flex items-center font-semibold text-white bg-neutral-red hover:border-neutral-red hover:border hover:text-neutral-red hover:bg-transparent border py-3 px-8 w-full sm:w-72 focus:outline-none rounded-lg text-lg transition-all ease-in duration-150"
               href="#data-protection-summarizer"
             >
-               Data Protection Summarizer <BsArrowRight className="ml-4 w-16" />
+              Data Protection Summarizer <BsArrowRight className="ml-4 w-16" />
             </a>
+          </div>
+          {/* IBM Watson Chat */}
+          <div>
+            <WebChatContainer
+              config={webChatOptions}
+              className="text-green-500"
+              style={{ color: "red" }}
+            />
+            
           </div>
         </div>
       </div>
