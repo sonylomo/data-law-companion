@@ -35,7 +35,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         />
         <RouterProvider router={router} />
       </CountryContextProvider>
-      <ReactQueryDevtools position="bottom-right" />
+      <ReactQueryDevtools />
     </QueryClientProvider>
   </React.StrictMode>
 );

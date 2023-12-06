@@ -6,8 +6,8 @@ import { BsCheck } from "react-icons/bs";
 import { toast } from "react-toastify";
 import copy from "copy-to-clipboard";
 import { MdContentCopy } from "react-icons/md";
-import { useQuery } from "@tanstack/react-query";
-import useSummary from "../../../hooks/queries/useSummary";
+// import { useQuery } from "@tanstack/react-query";
+// import useSummary from "../../../hooks/queries/useSummary";
 
 const topicData = {
   kenya: [
@@ -47,11 +47,6 @@ const Summarizer = () => {
   // const [loading, setLoading] = useState(false)
   // const [error, setError] = useState(null)
   // const [success, setSuccess] = useState(second)
-
-  useEffect(() => {
-    setDefaultCountry();
-  }, [country]);
-
   const Country = [
     { code: "KE", name: "kenya", flag: "🇰🇪" },
     { code: "UG", name: "uganda", flag: "🇺🇬" },
@@ -62,7 +57,7 @@ const Summarizer = () => {
     setSelectedCountry(topicData[country.name]);
   }, [country]);
 
-  const [Summary] = useState();
+  const [Summary] = useState("");
 
   const copyToClipboard = () => {
     closeModal();
@@ -106,7 +101,12 @@ const Summarizer = () => {
 
           <form className="flex sm:flex-row flex-col w-full gap-4 items-center">
             {/* select country */}
-            <Listbox value={defaultCountry} onChange={setDefaultCountry} className="w-full sm:w-32 z-10">
+            <Listbox
+              as="div"
+              value={defaultCountry}
+              onChange={setDefaultCountry}
+              className="w-full sm:w-32 z-10"
+            >
               <div className="relative mt-1">
                 <Listbox.Button className="relative h-10 w-full cursor-default rounded-lg bg-pale-orange py-2 pl-3 text-left shadow-md focus:outline-none focus-visible:border-neutral-orange focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-orange text-sm">
                   <span className="block truncate">
@@ -166,6 +166,7 @@ const Summarizer = () => {
 
             {/* Select Topic */}
             <Listbox
+              as="div"
               value={selectedTopic}
               onChange={setSelectedTopic}
               className="w-full sm:w-full z-[1]"

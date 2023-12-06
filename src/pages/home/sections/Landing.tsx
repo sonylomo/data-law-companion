@@ -1,18 +1,13 @@
-// import landing from "../../../assets/home/nairobi.jpg";
 import landing from "../../../assets/dlp/team-row-2.jpg";
-import sign from "../../../assets/home/sign.jpg"
-import hall from "../../../assets/home/hall.jpg"
 import LandingCard from "../../../components/home/LandingCard";
-import Sample from "../../../assets/home/moving.jpg";
-import explain from "../../../assets/home/explain.jpg"
-import typing from "../../../assets/home/typing-2.jpg"
-import pen from "../../../assets/home/pen.jpg"
-import writing from "../../../assets/home/writing.jpg"
-// import LandingImg from "../../../assets/home/tree.jpg"
+import explain from "../../../assets/home/explain.jpg";
+import typing from "../../../assets/home/typing-2.jpg";
+import pen from "../../../assets/home/pen.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import {
   WebChatContainer,
   setEnableDebug,
+  type WebChatConfig,
 } from "@ibm-watson/assistant-web-chat-react";
 
 const webChatOptions = {
@@ -22,7 +17,7 @@ const webChatOptions = {
   // subscriptionID: 'only on enterprise plans',
   // Note that there is no onLoad property here. The WebChatContainer component will override it.
   // Use the onBeforeRender or onAfterRender prop instead.
-};
+} as WebChatConfig;
 
 // Include this if you want to get debugging information from this library. Note this is different than
 // the web chat "debug: true" configuration option which enables debugging within web chat.
@@ -31,7 +26,8 @@ setEnableDebug(true);
 const LandingCardData = [
   {
     cardTitle: "Summary",
-    cardBody: "Get a summarized version of the topics in your country's Data Protection Act",
+    cardBody:
+      "Get a summarized version of the topics in your country's Data Protection Act",
     buttonText: "View Service",
     // image: "https://source.unsplash.com/random/400x400",
     image: pen,
@@ -84,8 +80,6 @@ const Landing = () => {
           <div>
             <WebChatContainer
               config={webChatOptions}
-              className="text-green-500"
-              style={{ color: "red" }}
             />
           </div>
         </div>
