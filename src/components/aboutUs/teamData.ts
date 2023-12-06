@@ -1,55 +1,67 @@
-import profile from "../../assets/person.jpeg";
+import {
+  lawrence,
+  dorcas,
+  maryanne,
+  millicent,
+  sonia,
+  felista,
+  florence,
+  dan,
+  rono,
+  obwatsa,
+} from "../../assets/dlp/";
+
 import { CarousselProps } from "../../types";
 
 export const TeamData: CarousselProps[] = [
   {
-    name: "Dr. Lawrence Nderu",
+    name: "Lawrence Nderu",
     title: "Principal Investigator",
-    image: profile,
+    image: lawrence,
   },
   {
     name: "Dorcas Mwigereri",
     title: "Co-Investigator",
-    image: profile,
+    image: dorcas,
   },
   {
     name: "Felista Mogire",
     title: "Project Administrator",
-    image: profile,
-  },
-  {
-    name: "John Michael Rono",
-    title: "LLM Algorithm Developer",
-    image: profile,
-  },
-  {
-    name: "Daniel Muiruri",
-    title: "LLM Algorithm Developer",
-    image: profile,
-  },
-  {
-    name: "Millicent Shiatikha",
-    title: "Chatbot Developer",
-    image: profile,
-  },
-  {
-    name: "Derrick Obwatsa",
-    title: "Web Developer",
-    image: profile,
-  },
-  {
-    name: "Elvis Swanya",
-    title: "Web Developer",
-    image: profile,
-  },
-  {
-    name: "Sonia Lomo",
-    title: "Mobile Developer",
-    image: profile,
+    image: felista,
   },
   {
     name: "Florence Njau",
     title: "Data Protection Act & AI",
-    image: profile,
+    image: florence,
+  },
+  {
+    name: "John Michael Rono",
+    title: "Machine Learning Engineer",
+    image: rono,
+  },
+  {
+    name: "Daniel Muiruri",
+    title: "Machine Learning Engineer",
+    image: dan,
+  },
+  {
+    name: "Millicent Shiatikha",
+    title: "Chatbot Developer",
+    image: millicent,
+  },
+  {
+    name: "Derrick Obwatsa",
+    title: "DevOps Engineer",
+    image: obwatsa,
+  },
+  {
+    name: "Sonia Lomo",
+    title: "Software Developer",
+    image: sonia,
+  },
+  {
+    name: "Maryanne Wanyoike",
+    title: "Legal Consultant",
+    image: maryanne,
   },
 ];

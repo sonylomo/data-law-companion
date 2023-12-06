@@ -3,6 +3,7 @@ import UgandaCOA from "../../../assets/countryCOA/ugandaCOA.png";
 import RwandaCOA from "../../../assets/countryCOA/rwandaCOA.png";
 import { Tab } from "@headlessui/react";
 import { useState } from "react";
+import { BsArrowRight } from "react-icons/bs";
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(" ");
@@ -132,7 +133,7 @@ const TabbedCountryCard = () => {
   ];
 
   return (
-    <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
+    <Tab.Group as="div" selectedIndex={selectedIndex} onChange={setSelectedIndex} className="mx-4">
       <Tab.List className="flex flex-col sm:flex-row gap-6 justify-center mx-auto items-center mb-10 sm:mb-10 max-w-screen-xl">
         {CountryData.map(({ name, image }, idx) => {
           return (
@@ -167,15 +168,15 @@ const TabbedCountryCard = () => {
               "ring-white/60 ring-offset-2 ring-offset-orange-300 focus:outline-none focus:ring-2  border border-orange-300"
             )}
           >
-            <div className="flex flex-col justify-between h-full">
-              <p className="text-lg">{summary}</p>
+            <div className="flex flex-col justify-between h-40 sm:h-full">
+              <div className="text-lg overflow-y-scroll">{summary}</div>
               <a
                 href={link}
                 rel="noopener noreferrer"
                 target="_blank"
-                className="font-semibold"
+                className="font-semibold flex items-center"
               >
-                Read More
+                Read More <BsArrowRight className="w-8 align-middle " />
               </a>
             </div>
           </Tab.Panel>

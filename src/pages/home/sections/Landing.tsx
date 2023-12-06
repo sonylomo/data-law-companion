@@ -1,6 +1,13 @@
-import landing from "../../../assets/home/nairobi.jpg";
+// import landing from "../../../assets/home/nairobi.jpg";
+import landing from "../../../assets/dlp/team-row-2.jpg";
+import sign from "../../../assets/home/sign.jpg"
+import hall from "../../../assets/home/hall.jpg"
 import LandingCard from "../../../components/home/LandingCard";
 import Sample from "../../../assets/home/moving.jpg";
+import explain from "../../../assets/home/explain.jpg"
+import typing from "../../../assets/home/typing-2.jpg"
+import pen from "../../../assets/home/pen.jpg"
+import writing from "../../../assets/home/writing.jpg"
 // import LandingImg from "../../../assets/home/tree.jpg"
 import { BsArrowRight } from "react-icons/bs";
 import {
@@ -24,35 +31,35 @@ setEnableDebug(true);
 const LandingCardData = [
   {
     cardTitle: "Summary",
-    cardBody: " Lorem ipsum dolor sit amet, #brands.",
-    buttonText: "View All Services",
+    cardBody: "Get a summarized version of the topics in your country's Data Protection Act",
+    buttonText: "View Service",
     // image: "https://source.unsplash.com/random/400x400",
-    image: Sample,
-    link: "#",
+    image: pen,
+    link: "#data-protection-summarizer",
   },
   {
     cardTitle: "Q&A",
-    cardBody: " Lorem ipsum dolor sit amet, #brands.",
-    buttonText: "View All Services",
-    image: Sample,
-    link: "#",
+    cardBody: "Ask us anything on your country's Data Protection Act",
+    buttonText: "View Service",
+    image: typing,
+    link: "#data-protection-questions",
   },
   {
     cardTitle: "Compliance Issues",
-    cardBody: " Lorem ipsum dolor sit amet, #brands.",
-    buttonText: "View All Services",
-    image: Sample,
-    link: "#",
+    cardBody: "Learn about the major compliance issues in Data Protection",
+    buttonText: "View All",
+    image: explain,
+    link: "/compliance-issues",
   },
 ];
-
+// sm:h-[550px]
 const Landing = () => {
   return (
     <>
       <div
-        className="h-[500px] sm:h-[550px] mx-auto bg-cover flex items-start pt-20 sm:pt-48 px-4"
+        className="w-full h-[500px] sm:h-[600px] mx-auto flex items-start pt-20 sm:pt-48 px-4"
         style={{
-          background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${landing})`,
+          background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${landing}) no-repeat center center fixed`,
         }}
       >
         <div className="text-white space-y-4 max-w-screen-2xl mx-auto">
@@ -67,10 +74,10 @@ const Landing = () => {
               Data Protection Summarizer
             </button> */}
             <a
-              className="flex items-center font-semibold text-white bg-neutral-red hover:border-neutral-red hover:border hover:text-neutral-red hover:bg-transparent border py-3 px-8 w-full sm:w-72 focus:outline-none rounded-lg text-lg transition-all ease-in duration-150"
+              className="uppercase flex items-center font-semibold text-white bg-neutral-red hover:border-neutral-red hover:border hover:text-neutral-red hover:bg-neutral-red/30 border py-3 px-8 w-full sm:w-64 focus:outline-none rounded-lg text-base transition-all ease-in duration-150"
               href="#data-protection-summarizer"
             >
-              Data Protection Summarizer <BsArrowRight className="ml-4 w-16" />
+              Summarizer <BsArrowRight className="ml-4 w-20" />
             </a>
           </div>
           {/* IBM Watson Chat */}
@@ -80,7 +87,6 @@ const Landing = () => {
               className="text-green-500"
               style={{ color: "red" }}
             />
-            
           </div>
         </div>
       </div>

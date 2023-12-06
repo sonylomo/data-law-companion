@@ -1,4 +1,5 @@
 import banner from "../../../assets/corporate.jpg";
+// import banner from "../../../assets/dlp/dev-team-3.jpg";
 
 const AboutUsHero = () => {
   return (
@@ -17,7 +18,6 @@ const AboutUsHero = () => {
         </p>
       </div>
       <div className="absolute inset-x-0 mx-auto -translate-y-20 z-10 rounded-xl shadow-xl w-[95%] md:w-[80%] lg:w-2/3 h-auto sm:h-72 bg-white px-4 py-10 sm:px-10 flex flex-col sm:flex-row gap-10 sm:gap-4">
-      
         <div className="px-2 xl:px-8 text-left items-center">
           <h2 className="font-semibold mb-2 text-xl lg:text-2xl">
             Objective 1
