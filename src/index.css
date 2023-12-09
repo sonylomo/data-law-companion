@@ -104,3 +104,38 @@
   left: 10px;
   transform: scale(-1);
 }
+
+/* Homepage image */
+.custom-bg {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(assets/dlp/team-row.jpg);
+}
+@media only screen and (max-width: 767px) {
+  .custom-bg {
+    /* The file size of this background image is 93% smaller to improve page load speed on mobile internet connections */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(assets/dlp/team-row-mobile.jpg);
+  }
+}
+
+/* Watson Web Chat Container */
+/* .custom-watson{
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 450px;
+  height: 500px;
+} */
+
+#WACContainer.WACContainer .HideWebChat {
+  /* display: none; */
+}
+
+#WACContainer > .WACContainer {
+  /* display: none; */
+  color: red;
+}

@@ -2,15 +2,20 @@ import { BsArrowRight } from "react-icons/bs";
 import { NewsData } from "../../types";
 
 type NewsCardPropsType = {
-  NewsCardProps: Omit<NewsData, "body">;
+  NewsCardProps: Omit<NewsData, "id">;
 };
 
 const NewsCard = ({
-  NewsCardProps: { banner, title, id, subheading },
+  NewsCardProps: { banner, title, subheading, body },
 }: NewsCardPropsType) => {
   return (
     <div className="md:w-80 xl:w-96 hover:shadow-none hover:border hover:border-neutral-red shadow-lg rounded-xl bg-pale-orange">
-      <a href={`#${id}`} className="hover:cursor-pointer space-y-3">
+      <a
+        href={`${body}`}
+        rel="noopener noreferrer"
+        target="_blank"
+        className="hover:cursor-pointer space-y-3"
+      >
         <div className="">
           <img
             src={banner}
@@ -27,8 +32,15 @@ const NewsCard = ({
             {subheading}
           </p>
         </div>
-        <div className="flex justify-between pb-3 px-6 hover:text-neutral-orange hover:underline">
-          <p>Read more</p> <BsArrowRight className="text-xl" />
+        <div>
+          <a
+            href={`${body}`}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="flex gap-16 items-center pb-3 px-6 hover:text-neutral-orange hover:underline"
+          >
+            Read more <BsArrowRight className="text-xl" />
+          </a>
         </div>
       </a>
     </div>

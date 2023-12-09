@@ -10,12 +10,10 @@ const AboutUsHero = () => {
           backgroundImage: `linear-gradient(to right, rgba(241, 163, 64, 0.6), rgba(0, 0, 0, 0.8)),url(${banner})`,
         }}
       >
-        <h1 className="uppercase text-3xl sm:text-5xl font-bold">
-          Your Awareness is Our Priority
+        <h1 className="text-5xl sm:text-6xl font-serif">
+          The Team and Partners
         </h1>
-        <p className="text-lg sm:text-xl">
-          Lorem, ipsum dolor sit amet consectetur uptatem repudiandae eius.
-        </p>
+        <p className="text-xl font-medium landing-text uppercase">Your Awareness is Our Priority</p>
       </div>
       <div className="absolute inset-x-0 mx-auto -translate-y-20 z-10 rounded-xl shadow-xl w-[95%] md:w-[80%] lg:w-2/3 h-auto sm:h-72 bg-white px-4 py-10 sm:px-10 flex flex-col sm:flex-row gap-10 sm:gap-4">
         <div className="px-2 xl:px-8 text-left items-center">

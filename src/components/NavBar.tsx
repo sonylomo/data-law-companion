@@ -124,12 +124,12 @@ const NavBar = () => {
         >
           Case Studies
         </Link>
-        <Link
+        {/* <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/news"
         >
           Blog
-        </Link>
+        </Link> */}
         <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/about-us"
@@ -159,12 +159,12 @@ const NavBar = () => {
         >
           Case Studies
         </Link>
-        <Link
+        {/* <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/news"
         >
           Blog
-        </Link>
+        </Link> */}
         <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
           to="/about-us"

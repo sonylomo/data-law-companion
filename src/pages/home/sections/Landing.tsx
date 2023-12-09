@@ -1,12 +1,11 @@
-import landing from "../../../assets/dlp/team-row-2.jpg";
 import LandingCard from "../../../components/home/LandingCard";
-import explain from "../../../assets/home/explain.jpg";
+import explain from "../../../assets/home/explain-min.jpg";
 import typing from "../../../assets/home/typing-2.jpg";
 import pen from "../../../assets/home/pen.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import {
-  WebChatContainer,
   setEnableDebug,
+  WebChatCustomElement,
   type WebChatConfig,
 } from "@ibm-watson/assistant-web-chat-react";
 
@@ -53,13 +52,16 @@ const Landing = () => {
   return (
     <>
       <div
-        className="w-full h-[500px] sm:h-[600px] mx-auto flex items-start pt-20 sm:pt-48 px-4"
+        className="relative w-full h-[500px] sm:h-[50rem] mx-auto flex items-start pt-20 sm:pt-48 px-4 custom-bg"
         style={{
-          background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${landing}) no-repeat center center fixed`,
+          // background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${landing})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="text-white space-y-4 max-w-screen-2xl mx-auto">
-          <div className="w-full space-y-4">
+          <div className="w-2/3 space-y-4">
             <h1 className="text-5xl sm:text-6xl font-serif">
               Welcome to Data Protection Companion
             </h1>
@@ -78,9 +80,7 @@ const Landing = () => {
           </div>
           {/* IBM Watson Chat */}
           <div>
-            <WebChatContainer
-              config={webChatOptions}
-            />
+            <WebChatCustomElement config={webChatOptions} className="custom-watson absolute right-24 top-20 w-[450px] h-[500px]" />
           </div>
         </div>
       </div>

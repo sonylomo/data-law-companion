@@ -4,8 +4,8 @@ import Layout from "../components/Layout";
 import AboutUs from "../pages/aboutUs/AboutUs";
 import Compliance from "../pages/compliance/Compliance";
 import News from "../pages/news/News";
-import CaseStudies from "../pages/caseStudies/CaseStudies";
-import Blog from '../pages/news/sections/Blog';
+import CaseStudies from '../pages/caseStudies/CaseStudies';
+// import Blog from '../pages/news/sections/Blog';
 
 export const router = createBrowserRouter([
   {
@@ -32,10 +32,10 @@ export const router = createBrowserRouter([
         path: "/case-studies",
         element: <CaseStudies />,
       },
-      {
-        path: "/blog",
-        element: <Blog />,
-      },
+      // {
+      //   path: "/blog",
+      //   element: <Blog />,
+      // },
     ],
   },
 ]);
