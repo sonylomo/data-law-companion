@@ -5,7 +5,8 @@ import pen from "../../../assets/home/pen.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import {
   setEnableDebug,
-  WebChatCustomElement,
+  // WebChatCustomElement,
+  WebChatContainer,
   type WebChatConfig,
 } from "@ibm-watson/assistant-web-chat-react";
 
@@ -52,7 +53,7 @@ const Landing = () => {
   return (
     <>
       <div
-        className="relative w-full h-[500px] sm:h-[50rem] mx-auto flex items-start pt-20 sm:pt-48 px-4 custom-bg"
+        className="relative w-full h-[35rem] sm:h-[50rem] mx-auto flex items-start pt-20 sm:pt-48 px-4 custom-bg"
         style={{
           // background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${landing})`,
           backgroundSize: "cover",
@@ -80,7 +81,8 @@ const Landing = () => {
           </div>
           {/* IBM Watson Chat */}
           <div>
-            <WebChatCustomElement config={webChatOptions} className="custom-watson absolute right-24 top-20 w-[450px] h-[500px]" />
+            {/* <WebChatCustomElement config={webChatOptions} className="custom-watson absolute right-24 top-20 w-[450px] h-[500px]" /> */}
+            <WebChatContainer config={webChatOptions} />
           </div>
         </div>
       </div>

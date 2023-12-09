@@ -131,11 +131,6 @@
   height: 500px;
 } */
 
-#WACContainer.WACContainer .HideWebChat {
+/* #WACContainer.WACContainer .HideWebChat { */
   /* display: none; */
-}
-
-#WACContainer > .WACContainer {
-  /* display: none; */
-  color: red;
-}
+/* } */
