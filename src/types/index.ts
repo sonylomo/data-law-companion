@@ -69,3 +69,13 @@ export type NewsData = {
   subheading: string;
   body: string;
 };
+
+
+// case Studies
+export type ExpandCardProps = {
+  icon: JSX.Element;
+  title: string;
+  country: string;
+  description: string;
+  source: string;
+};

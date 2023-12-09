@@ -20,11 +20,11 @@ const Compliance = () => {
       >
         <div className="mx-auto h-full flex flex-col lg:flex-row max-w-screen-2xl justify-between">
           <div className=" flex flex-col justify-center mr-4 gap-4 w-full lg:w-1/2 px-0 sm:px-8 mt-5 lg:mt-0">
-            <h1 className="uppercase text-3xl sm:text-5xl font-bold">
-              GET TO KNOW COMPLIANCE ISSUES
+            <h1 className="text-5xl sm:text-6xl font-serif">
+              Get to Know Compliance Issues
             </h1>
-            <p className="text-lg sm:text-2xl text-dark-grey">
-              Lorem, ipsum dolor sit amet consectetur uptatem repudiandae eius.
+            <p className="text-xl font-medium landing-text uppercase text-dark-grey">
+              Stay informed, stay secure
             </p>
             <a
               className="flex items-center font-semibold text-white bg-neutral-red hover:border-neutral-red hover:border hover:text-neutral-red hover:bg-transparent border py-3 px-8 w-full sm:w-1/2 focus:outline-none rounded-lg text-lg transition-all ease-in duration-150"
@@ -32,6 +32,8 @@ const Compliance = () => {
             >
               Get Started <BsArrowRight className="ml-4 text-xl" />
             </a>
+            {/* country flags */}
+            <div></div>
           </div>
 
           <div className="hidden md:flex gap-10">
