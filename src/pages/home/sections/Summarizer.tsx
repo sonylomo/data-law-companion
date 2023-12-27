@@ -6,58 +6,70 @@ import { BsCheck } from "react-icons/bs";
 import { toast } from "react-toastify";
 import copy from "copy-to-clipboard";
 import { MdContentCopy } from "react-icons/md";
-// import { useQuery } from "@tanstack/react-query";
-// import useSummary from "../../../hooks/queries/useSummary";
+import useSummary from "../../../hooks/mutation/useSummary";
 
 const topicData = {
   kenya: [
-    "Establishment of the Office of Data Protection Commissioner",
-    "Registration of Data Controllers and Data Processors",
-    "Principles and Obligations of Personal Data Protection",
-    "Processing of Sensitive Personal Data",
-    "Transfer of personal data outside Kenya",
-    "Exemptions",
-    "Enforcement Provisions",
-    "Financial Provisions",
-    "Offences of Unlawful Disclosure of Personal Data",
+    {
+      id: 1,
+      description:
+        "Establishment of the Office of Data Protection Commissioner",
+    },
+    {
+      id: 2,
+      description: "Registration of Data Controllers and Data Processors",
+    },
+    {
+      id: 3,
+      description: "Principles and Obligations of Personal Data Protection",
+    },
+    { id: 4, description: "Processing of Sensitive Personal Data" },
+    { id: 5, description: "Transfer of personal data outside Kenya" },
+    { id: 6, description: "Exemptions" },
+    { id: 7, description: "Enforcement Provisions" },
+    { id: 8, description: "Financial Provisions" },
+    { id: 9, description: "Offences of Unlawful Disclosure of Personal Data" },
   ],
 
   rwanda: [
-    "General Provisions",
-    "Processing and Quality of Personal Data",
-    "Rights of the Data Subject",
-    "Tasks and Powers of the Supervisory Authority",
-    "Registration of a Data Controller and Data Processor",
-    "Obligations of the Data Controller and the Data Processor",
-    "Sharing, Transfers, Storage and Retention of Personal Data",
-    "Misconducts, offenses, and sanctions",
-    "Miscellaneous, Transitional and Final Provisions",
+    { id: 1, description: "General Provisions" },
+    { id: 2, description: "Processing and Quality of Personal Data" },
+    { id: 3, description: "Rights of the Data Subject" },
+    { id: 4, description: "Tasks and Powers of the Supervisory Authority" },
+    {
+      id: 5,
+      description: "Registration of a Data Controller and Data Processor",
+    },
+    {
+      id: 6,
+      description: "Obligations of the Data Controller and the Data Processor",
+    },
+    {
+      id: 7,
+      description: "Sharing, Transfers, Storage and Retention of Personal Data",
+    },
+    { id: 8, description: "Misconducts, offenses, and sanctions" },
+    { id: 9, description: "Miscellaneous, Transitional and Final Provisions" },
   ],
-  uganda: ["General Provisions"],
+  uganda: [{ id: 1, description: "General Provisions" }],
 };
 
 const Summarizer = () => {
   const { country } = useCountry();
-  const [selectedTopic, setSelectedTopic] = useState(null);
-  const [selectedCountry, setSelectedCountry] = useState(
-    topicData[country.name]
-  );
-  const [isOpen, setIsOpen] = useState(false);
   const [defaultCountry, setDefaultCountry] = useState({ ...country });
-  // const [loading, setLoading] = useState(false)
-  // const [error, setError] = useState(null)
-  // const [success, setSuccess] = useState(second)
+  const [selectedTopic, setSelectedTopic] = useState({
+    id: "",
+    description: "---Select Data Protection Topic---",
+  });
+  const [isOpen, setIsOpen] = useState(false);
+
   const Country = [
     { code: "KE", name: "kenya", flag: "🇰🇪" },
     { code: "UG", name: "uganda", flag: "🇺🇬" },
     { code: "RW", name: "rwanda", flag: "🇷🇼" },
   ];
 
-  useEffect(() => {
-    setSelectedCountry(topicData[country.name]);
-  }, [country]);
-
-  const [Summary] = useState("");
+  const [Summary, setGeneratedSummary] = useState("");
 
   const copyToClipboard = () => {
     closeModal();
@@ -77,16 +89,25 @@ const Summarizer = () => {
     setIsOpen(true);
   };
 
-  // const { data: summaryData, isError, isSuccess, isLoading } = useSummary();
-  const handleSubmit = () => {
-    openModal();
-    // setSummary(summaryData);
-    // setError(isError)
-    // setLoading(isLoading)
-    // setSuccess(isSuccess)
+  const capitalizeFirstLetter = (str: string) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
-  // console.log("Summary Data: ", summaryData);
+  const { mutate: generateSummary, isPending } =
+    useSummary(setGeneratedSummary);
+
+  useEffect(() => {}, [generateSummary]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const response = await generateSummary({
+      country: capitalizeFirstLetter(defaultCountry.name),
+      section: selectedTopic.id && selectedTopic.id.toString(),
+    });
+    openModal();
+    console.log("response: ", response);
+  };
 
   return (
     <>
@@ -99,7 +120,10 @@ const Summarizer = () => {
             Data Protection Summarizer
           </h2>
 
-          <form className="flex sm:flex-row flex-col w-full gap-4 items-center">
+          <form
+            className="flex sm:flex-row flex-col w-full gap-4 items-center"
+            onSubmit={handleSubmit}
+          >
             {/* select country */}
             <Listbox
               as="div"
@@ -110,7 +134,7 @@ const Summarizer = () => {
               <div className="relative mt-1">
                 <Listbox.Button className="relative h-10 w-full cursor-default rounded-lg bg-pale-orange py-2 pl-3 text-left shadow-md focus:outline-none focus-visible:border-neutral-orange focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-orange text-sm">
                   <span className="block truncate">
-                    {country.flag} {country.code}
+                    {defaultCountry.flag} {defaultCountry.code}
                   </span>
                   <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                     <HiOutlineChevronUpDown
@@ -174,7 +198,7 @@ const Summarizer = () => {
               <div className="relative mt-1">
                 <Listbox.Button className="relative w-full cursor-default rounded-lg bg-pale-orange py-2 pl-3 text-left shadow-md focus:outline-none focus-visible:border-neutral-orange focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-orange">
                   <span className="block truncate">
-                    {selectedTopic || "---Select Data Protection Topic---"}
+                    {selectedTopic.description}
                   </span>
                   <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                     <HiOutlineChevronUpDown
@@ -191,7 +215,7 @@ const Summarizer = () => {
                 >
                   <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none">
                     {topicData[country.name] ? (
-                      selectedCountry.map((topic: string) => (
+                      topicData[defaultCountry.name].map((topic) => (
                         <Listbox.Option
                           key={crypto.randomUUID()}
                           className={({ active }) =>
@@ -210,7 +234,7 @@ const Summarizer = () => {
                                   selected ? "font-medium" : "font-normal"
                                 }`}
                               >
-                                {topic}
+                                {topic.description}
                               </span>
                               {selected && (
                                 <span className="absolute inset-y-0 left-0 flex items-center pl- text-neutral-orange">
@@ -233,19 +257,17 @@ const Summarizer = () => {
             </Listbox>
 
             <button
-              type="button"
-              // disabled={isLoading}
-              onClick={handleSubmit}
+              type="submit"
+              disabled={isPending}
               className="w-40 h-10 uppercase disabled:bg-light-grey rounded-md bg-neutral-red px-4 py-2 text-sm font-medium text-white hover:bg-neutral-red/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 transition-all ease-in duration-150"
             >
-              {/* {isLoading ? "Loading..." : "Submit"} */}
-              submit
+              {isPending ? "Loading..." : "Submit"}
             </button>
           </form>
 
           {/* Summary Display */}
 
-          {Summary && (
+          {!isOpen && Summary && (
             <div className="p-4 my-4 rounded bg-pale-orange text-lg overflow-y-scroll h-36">
               <button
                 type="button"
@@ -289,7 +311,7 @@ const Summarizer = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
@@ -297,7 +319,11 @@ const Summarizer = () => {
                     Your Summary
                   </Dialog.Title>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">{Summary}</p>
+                    <p className="text-base text-gray-700">
+                      {isPending
+                        ? "Please wait while we generate your summary..."
+                        : Summary}
+                    </p>
                   </div>
 
                   <div className="mt-4 float-right">
