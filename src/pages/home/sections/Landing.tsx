@@ -3,6 +3,7 @@ import explain from "../../../assets/home/explain-min.jpg";
 import typing from "../../../assets/home/typing-2.jpg";
 import pen from "../../../assets/home/pen.jpg";
 import { BsArrowRight } from "react-icons/bs";
+import landing from "../../../assets/home/draft2.png";
 import {
   setEnableDebug,
   // WebChatCustomElement,
@@ -56,12 +57,13 @@ const Landing = () => {
         className="relative w-full h-[35rem] sm:h-[50rem] mx-auto flex items-start pt-20 sm:pt-48 px-4 custom-bg"
         style={{
           // background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${landing})`,
+          background: `url(${landing})`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="text-white space-y-4 max-w-screen-2xl mx-auto">
+        <div className="text-black space-y-4 max-w-screen-2xl mx-auto">
           <div className="w-2/3 space-y-4">
             <h1 className="text-5xl sm:text-6xl font-serif">
               Welcome to Data Protection Companion

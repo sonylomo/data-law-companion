@@ -19,6 +19,7 @@ export type ProfileCardProps = {
   image: string;
   company: string;
   name: string;
+  link: string;
 };
 
 export type CarousselProps = {
@@ -69,7 +70,6 @@ export type NewsData = {
   subheading: string;
   body: string;
 };
-
 
 // case Studies
 export type ExpandCardProps = {

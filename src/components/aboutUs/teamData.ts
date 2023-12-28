@@ -61,7 +61,7 @@ export const TeamData: CarousselProps[] = [
   },
   {
     name: "Maryanne Wanyoike",
-    title: "Legal Consultant",
+    title: "Legal Officer",
     image: maryanne,
   },
 ];
