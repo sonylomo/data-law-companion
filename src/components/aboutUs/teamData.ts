@@ -1,6 +1,5 @@
 import {
   lawrence,
-  dorcas,
   maryanne,
   millicent,
   sonia,
@@ -18,11 +17,6 @@ export const TeamData: CarousselProps[] = [
     name: "Lawrence Nderu",
     title: "Principal Investigator",
     image: lawrence,
-  },
-  {
-    name: "Dorcas Mwigereri",
-    title: "Co-Investigator",
-    image: dorcas,
   },
   {
     name: "Felista Mogire",

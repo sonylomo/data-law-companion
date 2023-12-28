@@ -66,7 +66,7 @@ const Landing = () => {
         <div className="text-black space-y-4 max-w-screen-2xl mx-auto">
           <div className="w-2/3 space-y-4">
             <h1 className="text-5xl sm:text-6xl font-serif">
-              Welcome to Data Protection Companion
+              Welcome to Data Law Companion
             </h1>
             <h2 className="text-xl font-medium landing-text uppercase">
               Stay informed, stay secure
