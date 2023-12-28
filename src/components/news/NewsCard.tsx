@@ -20,7 +20,7 @@ const NewsCard = ({
           <img
             src={banner}
             alt={title}
-            className="w-full h-40 sm:h-4/5 object-cover border-t rounded-t-xl"
+            className="w-full h-40 sm:h-56 object-cover border-t rounded-t-xl"
           />
         </div>
 

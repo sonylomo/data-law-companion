@@ -1,32 +1,32 @@
 import { ImDroplet } from "react-icons/im";
 
-export const ComplianceIssuesData1 = [
-  {
-    id: 1,
-    icon: <ImDroplet className="text-neutral-orange text-3xl" />,
-    title: "Non-Compliance with Notification Requirements:",
-    description: [
-      "Failure to Report Data Breaches to the Relevant Supervisory Authority or Affected Data Subjects Within Specified Time Frames",
-    ],
-  },
-  {
-    id: 2,
-    icon: <ImDroplet className="text-neutral-orange text-3xl" />,
-    title: "Cross-Border Data Transfer Violations",
-    description: [
-      "Transferring Personal Data Across Borders Without Implementing Adequate Safeguards or Without Necessary Legal Mechanisms",
-    ],
-  },
-  {
-    id: 3,
-    icon: <ImDroplet className="text-neutral-orange text-3xl" />,
-    title: "Failure to Provide Data Subject Rights",
-    description: [
-      "Not Responding to Data Subject Requests Within Specified Time Frames",
-      "Failing to Provide Mechanisms for Individuals to Exercise Their Rights",
-    ],
-  },
-];
+// export const ComplianceIssuesData1 = [
+//   {
+//     id: 1,
+//     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
+//     title: "Non-Compliance with Notification Requirements:",
+//     description: [
+//       "Failure to Report Data Breaches to the Relevant Supervisory Authority or Affected Data Subjects Within Specified Time Frames",
+//     ],
+//   },
+//   {
+//     id: 2,
+//     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
+//     title: "Cross-Border Data Transfer Violations",
+//     description: [
+//       "Transferring Personal Data Across Borders Without Implementing Adequate Safeguards or Without Necessary Legal Mechanisms",
+//     ],
+//   },
+//   {
+//     id: 3,
+//     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
+//     title: "Failure to Provide Data Subject Rights",
+//     description: [
+//       "Not Responding to Data Subject Requests Within Specified Time Frames",
+//       "Failing to Provide Mechanisms for Individuals to Exercise Their Rights",
+//     ],
+//   },
+// ];
 
 export const ComplianceIssuesData11 = [
   {
@@ -34,56 +34,56 @@ export const ComplianceIssuesData11 = [
     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
     title: "Non-Compliance with Notification Requirements",
     description:
-      "expsaepe tempore molestias consequatur inventore amet omnis soluta natus quos labore eligendi!",
+      "Failure to Report Data Breaches to the Relevant Supervisory Authority or Affected Data Subjects Within Specified Time Frames ...",
   },
   {
     id: "cross-border-data-transfer-violations",
     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
     title: "Cross-Border Data Transfer Violations",
     description:
-      "expsaepe tempore molestias consequatur inventore amet omnis soluta natus quos labore eligendi! Quaerat?saepe tempore.",
+      "Transferring Personal Data Across Borders Without Implementing Adequate Safeguards or Without Necessary Legal Mechanisms ...",
   },
   {
     id: "failure-to-provide-data-subject-rights",
     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
     title: "Failure to Provide Data Subject Rights",
     description:
-      "expsaepe tempore molestias consequatur inventore amet omnis soluta natus quos labore eligendi! Quaerat?saepe tempore molestias consequatur.",
+      "Not Responding to Data Subject Requests Within Specified Time Frames ...",
   },
 ];
 
-export const ComplianceIssuesData2 = [
-  {
-    id: 4,
-    icon: <ImDroplet className="text-neutral-orange text-3xl" />,
-    title: "Data Retention Violations",
-    description: [
-      "Retaining Personal Data for Longer Than Necessary or Without a Valid Reason",
-      "Failing to Adhere to Data Retention Policies",
-    ],
-  },
+// export const ComplianceIssuesData2 = [
+//   {
+//     id: 4,
+//     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
+//     title: "Data Retention Violations",
+//     description: [
+//       "Retaining Personal Data for Longer Than Necessary or Without a Valid Reason",
+//       "Failing to Adhere to Data Retention Policies",
+//     ],
+//   },
 
-  {
-    id: 5,
-    icon: <ImDroplet className="text-neutral-orange text-3xl" />,
-    title: "Unauthorized Processing or Access",
-    description: [
-      "Unauthorized Access to Personal Data",
-      "Processing Personal Data Without Proper Authorization or Legal Basis",
-      "Exceptions to the consent requirement exist in specific circumstances outlined in the law",
-      "Exceeding the Scope of Authorized Processing",
-    ],
-  },
-  {
-    id: 6,
-    icon: <ImDroplet className="text-neutral-orange text-3xl" />,
-    title: "Lack of consent",
-    description: [
-      "Processing Personal Data Without Obtaining Valid and Explicit Consent from Data Subjects",
-      "Failing to Inform Individuals About the Purpose of Data Processing",
-    ],
-  },
-];
+//   {
+//     id: 5,
+//     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
+//     title: "Unauthorized Processing or Access",
+//     description: [
+//       "Unauthorized Access to Personal Data",
+//       "Processing Personal Data Without Proper Authorization or Legal Basis",
+//       "Exceptions to the consent requirement exist in specific circumstances outlined in the law",
+//       "Exceeding the Scope of Authorized Processing",
+//     ],
+//   },
+//   {
+//     id: 6,
+//     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
+//     title: "Lack of consent",
+//     description: [
+//       "Processing Personal Data Without Obtaining Valid and Explicit Consent from Data Subjects",
+//       "Failing to Inform Individuals About the Purpose of Data Processing",
+//     ],
+//   },
+// ];
 
 export const ComplianceIssuesData22 = [
   {
@@ -91,7 +91,7 @@ export const ComplianceIssuesData22 = [
     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
     title: "Data Retention Violations",
     description:
-      "expsaepe tempore molestias consequatur inventore amet omnis soluta natus quos labore eligendi! Quaerat?saepe tempore molestias consequatur.",
+      "Retaining Personal Data for Longer Than Necessary or Without a Valid Reason and Failing to Adhere to Data Retention Policies ...",
   },
 
   {
@@ -99,14 +99,14 @@ export const ComplianceIssuesData22 = [
     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
     title: "Unauthorized Processing or Access",
     description:
-      "expsaepe tempore molestias consequatur inventore amet omnis soluta natus quos labore eligendi! Quaerat?saepe tempore molestias consequatur.",
+      "Unauthorized Access to Personal Data, Processing Personal Data Without Proper Authorization or Legal Basis ...",
   },
   {
     id: "lack-of-consent",
     icon: <ImDroplet className="text-neutral-orange text-3xl" />,
     title: "Lack of consent",
     description:
-      "expsaepe tempore molestias consequatur inventore amet omnis soluta natus quos labore eligendi! Quaerat?saepe tempore molestias consequatur.",
+      "Processing Personal Data Without Obtaining Valid and Explicit Consent from Data Subjects ...",
   },
 ];
 

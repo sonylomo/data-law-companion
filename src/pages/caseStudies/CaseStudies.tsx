@@ -1,27 +1,33 @@
-import bannerImg from "../../assets/handshake.png";
 import NewsCard from "../../components/news/NewsCard";
 import { NewsData as NewsDataType } from "../../types/index";
 import banner from "../../assets/corporate.jpg";
+import bannerImg3 from "../../assets/caseStudies/mtn.png"
+import bannerImg1 from "../../assets/caseStudies/safeboda.png"
+import bannerImg2 from "../../assets/caseStudies/roma.png"
+import bannerImg4 from "../../assets/caseStudies/oppo.png"
+import bannerImg5 from "../../assets/caseStudies/regus.png"
+import bannerImg6 from "../../assets/caseStudies/mulla.png"
+import bannerImg7 from "../../assets/caseStudies/casavera.png"
 
 const CaseStudiesData: NewsDataType[] = [
   {
-    banner: bannerImg,
+    banner: bannerImg1,
     title: "SafeBoda",
-    id: 3,
+    id: 1,
     subheading:
       "The National Information Technology Authority, Uganda (NITA-U) conducted its first-ever data protection investigation into the operations of Guinness Transporters Limited, trading as SafeBoda. The investigation found SafeBoda guilty of unlawfully disclosing users’ personal data to third parties without consent.",
-    body: "https://www.reuters.com/article/rwanda-telecoms-idUSL8N1IJ2IJ/ ",
+    body: "https://balogunharold.com/the-safeboda-data-privacy-breach-decision-some-considerations/",
   },
   {
-    banner: bannerImg,
+    banner: bannerImg2,
     title: "Roma School",
     id: 2,
     subheading:
       "Roma School, an educational institution in Uthiru, faces the highest penalty to date, KES 4,550,000, for posting minors’ pictures without parental consent.",
-    body: "https://www.plugmedia.co.ke/2023/09/data-protection-crackdownodpc-strikes-with-huge-fine-for-unauthorized-social-media-post/",
+    body: "https://www.the-star.co.ke/news/2023-09-26-school-fined-sh45m-for-using-minors-pictures-without-parental-consent/",
   },
   {
-    banner: bannerImg,
+    banner: bannerImg3,
     title: "MTN Rwanda",
     id: 3,
     subheading:
@@ -29,37 +35,37 @@ const CaseStudiesData: NewsDataType[] = [
     body: "https://www.reuters.com/article/rwanda-telecoms-idUSL8N1IJ2IJ/ ",
   },
   {
-    banner: bannerImg,
+    banner: bannerImg4,
     title: "Oppo Kenya",
-    id: 1,
+    id: 4,
     subheading:
       "Mobile phone reseller Oppo Kenya has been fined Sh5 million by the Office of the Data Protection Commissioner.",
     body: "https://www.businessdailyafrica.com/bd/economy/oppo-fined-sh5m-for-breaching-data-laws--4063118",
   },
 
   {
-    banner: bannerImg,
+    banner: bannerImg5,
     title: "Whitepath and Regus",
-    id: 3,
+    id: 5,
     subheading:
       "Mobile loans lender Whitepath and office space provider Regus Kenya have been slapped with Sh5 million penalty each for breaching customer data privacy.",
     body: "https://www.businessdailyafrica.com/bd/corporate/companies/whitepath-regus-slapped-with-sh5m-fine-for-breaching-data-laws-4196536",
   },
   {
-    banner: bannerImg,
+    banner: bannerImg6,
     title: "Mulla Pride Ltd",
-    id: 3,
+    id: 6,
     subheading:
       "Mulla Pride Ltd., a digital credit provider operating the KeCredit and Faircash mobile lending apps. They were fined KES 2,975,000 for misusing personal information obtained from third parties.",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellat culpa deleniti totam consequatur earum officiis et molestias qui optio! Magnam iure eaque ad minus libero molestias illo velit voluptates!",
+    body: "https://ntvkenya.co.ke/news/mobile-loans-firm-fined-for-accessing-borrowers-phone-books/",
   },
   {
-    banner: bannerImg,
+    banner: bannerImg7,
     title: "Casa Vera Lounge",
-    id: 3,
+    id: 7,
     subheading:
       "Casa Vera Lounge, a popular restaurant in Nairobi. They were fined KES 1,850,000 for posting a customer’s image on their social media platform without the data subject’s consent.",
-    body: "https://www.businessdailyafrica.com/bd/corporate/companies/whitepath-regus-slapped-with-sh5m-fine-for-breaching-data-laws-4196536",
+    body: "https://www.citizen.digital/news/casa-vera-lounge-fined-ksh18m-for-posting-a-revelers-image-online-without-consent-n328130",
   },
 ];
 
@@ -72,10 +78,8 @@ const CaseStudies = () => {
           backgroundImage: `linear-gradient(to right, rgba(241, 163, 64, 0.6), rgba(0, 0, 0, 0.8)),url(${banner})`,
         }}
       >
-        <h1 className="uppercase text-3xl sm:text-5xl font-bold">
-          Case Studies
-        </h1>
-        <p className="text-lg sm:text-xl">
+        <h1 className="text-3xl sm:text-5xl font-serif ">Case Studies</h1>
+        <p className="text-lg uppercase landing-text">
           Exploration of Real Cases and Real Consequences in the World of Data
           Privacy{" "}
         </p>

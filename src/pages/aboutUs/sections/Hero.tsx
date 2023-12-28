@@ -14,7 +14,7 @@ const AboutUsHero = () => {
         <h1 className="text-5xl sm:text-6xl font-serif">
           The Team and Partners
         </h1>
-        <p className="text-xl font-medium landing-text uppercase">
+        <p className="text-xl font-medium uppercase landing-text">
           Your Awareness is Our Priority
         </p>
       </div>

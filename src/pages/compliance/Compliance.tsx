@@ -33,7 +33,7 @@ const Compliance = () => {
               Get Started <BsArrowRight className="ml-4 text-xl" />
             </a>
             {/* country flags */}
-            <div></div>
+            <p className="text-4xl tracking-widest"> 🇰🇪🇺🇬🇷🇼</p>
           </div>
 
           <div className="hidden md:flex gap-10">
