@@ -69,6 +69,7 @@ if (!self.define) {
 }
 define(['./workbox-ab7aa862'], (function (workbox) { 'use strict';
 
+
   self.skipWaiting();
   workbox.clientsClaim();
 

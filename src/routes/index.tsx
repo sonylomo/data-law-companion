@@ -7,6 +7,7 @@ import News from "../pages/news/News";
 import CaseStudies from '../pages/caseStudies/CaseStudies';
 import Blog from '../pages/news/sections/Blog';
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
