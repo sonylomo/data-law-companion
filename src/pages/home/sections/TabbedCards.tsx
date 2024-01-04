@@ -133,7 +133,7 @@ const TabbedCountryCard = () => {
   ];
 
   return (
-    <Tab.Group as="div" selectedIndex={selectedIndex} onChange={setSelectedIndex} className="mx-4">
+    <Tab.Group as="div" selectedIndex={selectedIndex} onChange={setSelectedIndex} className="mx-4" id="data-law-overview">
       <Tab.List className="flex flex-col sm:flex-row gap-6 justify-center mx-auto items-center mb-10 sm:mb-10 max-w-screen-xl">
         {CountryData.map(({ name, image }, idx) => {
           return (

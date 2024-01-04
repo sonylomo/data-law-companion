@@ -32,14 +32,14 @@ const LandingCardData = [
     buttonText: "View Service",
     // image: "https://source.unsplash.com/random/400x400",
     image: pen,
-    link: "#data-protection-summarizer",
+    link: "#data-law-summarizer",
   },
   {
     cardTitle: "Q&A",
     cardBody: "Ask us anything on your country's Data Protection Act",
     buttonText: "View Service",
     image: typing,
-    link: "#data-protection-questions",
+    link: "#data-law-questions",
   },
   {
     cardTitle: "Compliance Issues",
@@ -63,10 +63,10 @@ const Landing = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="text-black space-y-4 max-w-screen-2xl mx-auto">
-          <div className="w-2/3 space-y-4">
+        <div className="text-black space-y-4 max-w-screen-2xl lg:ml-20 md:ml-32">
+          <div className="w-full space-y-4">
             <h1 className="text-5xl sm:text-6xl font-serif">
-              Welcome to Data Law Companion
+              Welcome to <br/>Data Law Companion
             </h1>
             <h2 className="text-xl font-medium landing-text uppercase">
               Stay informed, stay secure
@@ -76,9 +76,9 @@ const Landing = () => {
             </button> */}
             <a
               className="uppercase flex items-center font-semibold text-white bg-neutral-red hover:border-neutral-red hover:border hover:text-neutral-red hover:bg-neutral-red/30 border py-3 px-8 w-full sm:w-64 focus:outline-none rounded-lg text-base transition-all ease-in duration-150"
-              href="#data-protection-summarizer"
+              href="#data-law-summarizer"
             >
-              Summarizer <BsArrowRight className="ml-4 w-20" />
+              Get Started <BsArrowRight className="ml-4 w-auto" />
             </a>
           </div>
           {/* IBM Watson Chat */}

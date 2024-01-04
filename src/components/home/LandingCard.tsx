@@ -11,9 +11,9 @@ const LandingCard = ({
     <div className="w-96 h-80 rounded-md">
       <a
         href={`${link}`}
-        className="shadow-2xl relative rounded-md hover:cursor-pointer"
+        className="shadow-2xl relative hover:cursor-pointer"
       >
-        <div className="h-full relative shadow-2xl overflow-hidden group ">
+        <div className="h-full relative shadow-2xl overflow-hidden rounded-md group">
           <div className="absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)] transition-all ease-in-out duration-500 rounded-md">
             <div className="w-full h-full p-5 relative">
               <div className="absolute -bottom-20 group-hover:bottom-24 text-white text-left transition-all ease-in-out duration-500">
