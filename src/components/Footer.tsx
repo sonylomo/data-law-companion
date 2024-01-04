@@ -16,7 +16,7 @@ const Footer = () => {
 
           <ul className="flex flex-col gap-2 sm:gap-5 list-none text-sm font-medium">
             <li>
-              <a href="#">Summarization</a>
+              <a href="/#data-law-summarizer">Summarization</a>
             </li>
             <li>
               <a href="#">Q&A</a>
@@ -31,13 +31,13 @@ const Footer = () => {
 
           <ul className="flex flex-col gap-2 sm:gap-5 list-none text-sm font-medium">
             <li>
-              <a href="#">DPA-Kenya</a>
+              <a href="/#data-law-overview">DPA-Kenya</a>
             </li>
             <li>
-              <a href="#">DPA-Rwanda</a>
+              <a href="/#data-law-overview">DPA-Rwanda</a>
             </li>
             <li>
-              <a href="#">DPA-Uganda</a>
+              <a href="/#data-law-overview">DPA-Uganda</a>
             </li>
             <li>
               <Link to="/compliance-issues">Compliance Issues</Link>
@@ -52,16 +52,16 @@ const Footer = () => {
 
           <ul className="flex flex-col gap-2 sm:gap-5 list-none text-sm font-medium">
             <li>
-              <a href="#">Team</a>
+              <a href="/about-us#team">Team</a>
             </li>
             <li>
-              <a href="#">Funding & Partners</a>
+              <a href="/about-us#funding">Funding & Partners</a>
             </li>
             <li>
-              <a href="#">Stakeholders</a>
+              <a href="/about-us#stakeholders">Stakeholders</a>
             </li>
             <li>
-              <a href="#">Terms of Use</a>
+              <a href="/about-us#terms-of-use">Terms of Use</a>
             </li>
           </ul>
         </div>
@@ -73,16 +73,16 @@ const Footer = () => {
 
           <ul className="flex flex-col gap-2 sm:gap-5 list-none text-sm font-medium">
             <li>
-              <a href="#">Case Studies</a>
+              <a href="/case-studies">Case Studies</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="/blog">Blog</a>
             </li>
             <li>
-              <a href="#">News</a>
+              <a href="/news">News</a>
             </li>
             <li>
-              <a href="#">FAQ</a>
+              <a href="/#faq">FAQ</a>
             </li>
           </ul>
         </div>
@@ -94,7 +94,7 @@ const Footer = () => {
         </h1>
         <div className="flex-3 flex flex-col items-center">
           {/* logo */}
-          <img src={logo} alt="logo" className=" md:ml-0 ml-4 object-contain" />
+          <img src={logo} alt="logo" className=" md:ml-0 ml-4 object-contain h-16 " />
         </div>
       </div>
     </footer>

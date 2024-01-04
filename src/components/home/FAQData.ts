@@ -1,27 +1,12 @@
 export const FAQData = [
   {
-    question: "What is the Data Protection Act?",
+    question: "What are Data Protection Laws?",
     answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Data protection laws are regulations that govern the collection, processing, storage, and sharing of personal data to ensure the privacy and rights of individuals.",
   },
   {
-    question: "What is the Data Protection Act?",
+    question: "How many countries does the Data Law Companion support?",
     answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-  },
-  {
-    question: "What is the Data Protection Act?",
-    answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-  },
-  {
-    question: "What is the Data Protection Act?",
-    answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-  },
-  {
-    question: "What is the Data Protection Act?",
-    answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Our Data Law Companion currently supports 3 countries: Kenya, Uganda and Rwanda. However, we plan on expanding throughout Africa and abroad.",
   },
 ];
