@@ -12,6 +12,8 @@ export type LandingCardData = {
   buttonText: string;
   image: string;
   link: string;
+  instance?: null | unknown;
+  toggleWebChat?: unknown;
 };
 
 // About Us

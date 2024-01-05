@@ -125,12 +125,44 @@
 /* Watson Web Chat Container */
 /* .custom-watson{
   position: absolute;
-  left: 100px;
+  right: 150px;
   top: 100px;
   width: 450px;
   height: 500px;
+}  */
+
+ /* Display button parent div */
+/* #WACContainer.WACContainer .WACLauncher__ButtonContainer.WACLauncher__ButtonContainer--round {
+  display: none;
+} 
+
+#WACContainer.WACContainer .WebChatStyles {
+  position: relative;
+  transition: right 500ms ease-in-out;
 } */
 
 /* #WACContainer.WACContainer .HideWebChat { */
   /* display: none; */
 /* } */
+
+/* #WACContainer.WACContainer .StartOpenAnimation {
+  transition: none;
+  right: -500px;
+}
+
+#WACContainer.WACContainer .OpenAnimation {
+  right: 16px;
+}
+
+#WACContainer.WACContainer .CloseAnimation {
+  right: -500px;
+}
+
+/* hide close button on chat */
+/* #WACContainer.WACContainer .WACHomeScreenHeader button.WAC__button--ghost { */
+  /* display: none; */
+/* } */
+
+/* #WACContainer.WACContainer .WACHeader button.WAC__button--ghost[aria-label="Close the chat window"]  { */
+  /* display: none; */
+/* }  */

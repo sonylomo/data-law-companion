@@ -5,14 +5,19 @@ type LandingCardProps = {
 };
 
 const LandingCard = ({
-  LandingCard: { cardTitle, cardBody, buttonText, image, link },
+  LandingCard: {
+    cardTitle,
+    cardBody,
+    buttonText,
+    image,
+    link,
+    instance,
+    toggleWebChat,
+  },
 }: LandingCardProps) => {
   return (
     <div className="w-96 h-80 rounded-md">
-      <a
-        href={`${link}`}
-        className="shadow-2xl relative hover:cursor-pointer"
-      >
+      <a href={`${link}`} className="shadow-2xl relative hover:cursor-pointer transition-all ease-out">
         <div className="h-full relative shadow-2xl overflow-hidden rounded-md group">
           <div className="absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)] transition-all ease-in-out duration-500 rounded-md">
             <div className="w-full h-full p-5 relative">
@@ -21,9 +26,23 @@ const LandingCard = ({
                   {cardTitle}
                 </h2>
                 <p className="text-lg font-light text-white">{cardBody}</p>
-                <button className="py-2 px-6 rounded-md border border-neutral-orange mt-4 hover:bg-neutral-red hover:border-neutral-red w-48">
-                  {buttonText}
-                </button>
+                {cardTitle === "Q&A Assitant" && instance ? (
+                  <button
+                    type="button"
+                    onClick={toggleWebChat}
+                    className="py-2 px-6 rounded-md border border-neutral-orange mt-4 hover:bg-neutral-red hover:border-neutral-red w-48"
+                  >
+                    {buttonText}
+                  </button>
+
+                ) : (
+                  <button
+                    type="button"
+                    className="py-2 px-6 rounded-md border border-neutral-orange mt-4 hover:bg-neutral-red hover:border-neutral-red w-48"
+                  >
+                    {buttonText}
+                  </button>
+                )}
               </div>
             </div>
           </div>

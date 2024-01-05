@@ -165,7 +165,7 @@ const TabbedCountryCard = () => {
             key={crypto.randomUUID()}
             className={classNames(
               "bg-pale-orange shadow-lg rounded h-full py-8 px-6",
-              "ring-white/60 ring-offset-2 ring-offset-orange-300 focus:outline-none focus:ring-2  border border-orange-300"
+              "ring-white/60 ring-offset-2 ring-offset-orange-300 focus:outline-none focus:ring-2 border border-orange-300"
             )}
           >
             <div className="flex flex-col justify-between h-40 sm:h-full">
