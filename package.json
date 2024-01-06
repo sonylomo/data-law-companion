@@ -1,5 +1,6 @@
 {
-  "name": "data-protection-act",
+  "homepage": "https://data-law-companion.vercel.app/",
+  "name": "data-law-companion",
   "private": true,
   "version": "0.0.0",
   "type": "module",
