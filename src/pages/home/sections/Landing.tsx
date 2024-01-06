@@ -48,7 +48,7 @@ const Landing = () => {
       cardTitle: "Summary",
       cardBody:
         "Get a summarized version of the topics in your country's Data Protection Act",
-      buttonText: "View Service",
+      buttonText: "Try Summarizer",
       // image: "https://source.unsplash.com/random/400x400",
       image: pen,
       link: "#data-law-summarizer",
@@ -56,7 +56,7 @@ const Landing = () => {
     {
       cardTitle: "Q&A Assitant",
       cardBody: "Ask us anything on your country's Data Protection Act",
-      buttonText: "View Service",
+      buttonText: "Try Q&A",
       image: typing,
       link: "#data-law-questions",
       instance,
@@ -81,12 +81,12 @@ const Landing = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <>
       <div
-        className="relative w-full h-[35rem] sm:h-[50rem] mx-auto flex items-start pt-20 sm:pt-48 px-4 custom-bg"
+        className="relative w-full h-[35rem] sm:h-[50rem] mx-auto flex items-start pt-20 sm:pt-24 px-4 custom-bg"
         style={{
           // background: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${landing})`,
           background: `url(${landing})`,
@@ -110,17 +110,20 @@ const Landing = () => {
             {/* <button className="py-2 px-6 rounded-md border border-neutral-orange transparent-bg w-48">
               Data Protection Summarizer
             </button> */}
-            <a
-              className="uppercase flex items-center font-semibold text-white bg-neutral-red hover:border-neutral-red hover:border hover:text-neutral-red hover:bg-neutral-red/30 border py-3 px-8 w-full sm:w-64 focus:outline-none rounded-lg text-base transition-all ease-in duration-150"
-              href="#data-law-summarizer"
-            >
-              Q&A Assistant <BsArrowRight className="ml-4 w-auto" />
-            </a>
+            {instance && (
+              <button
+                type="button"
+                className="uppercase flex items-center font-semibold text-white bg-neutral-red hover:border-neutral-red hover:border hover:text-neutral-red hover:bg-neutral-red/30 border py-3 px-8 w-full sm:w-64 focus:outline-none rounded-lg text-base transition-all ease-in duration-150"
+                onClick={toggleWebChat}
+              >
+                Q&A Assistant <BsArrowRight className="ml-4 w-auto" />
+              </button>
+            )}
           </div>
           {/* IBM Watson Chat */}
-          {/* <div>
+          <div>
             {isMobile ? (
-              <WebChatContainer config={webChatOptions} />
+              <WebChatContainer config={webChatOptions} onBeforeRender={setInstance} />
             ) : (
               <WebChatCustomElement
                 config={webChatOptions}
@@ -131,9 +134,7 @@ const Landing = () => {
                 onBeforeRender={setInstance}
               />
             )}
-          </div> */}
-              <WebChatContainer config={webChatOptions} />
-
+          </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center sm:items-start gap-6 mx-auto -translate-y-28">

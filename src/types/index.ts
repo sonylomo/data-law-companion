@@ -11,7 +11,6 @@ export type LandingCardData = {
   cardBody: string;
   buttonText: string;
   image: string;
-  link: string;
   instance?: null | unknown;
   toggleWebChat?: unknown;
 };
