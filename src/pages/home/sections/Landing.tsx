@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from "react";
+import { useCallback, useState, useEffect, type SetStateAction, type Dispatch } from "react";
 import LandingCard from "../../../components/home/LandingCard";
 import explain from "../../../assets/home/explain-min.jpg";
 import typing from "../../../assets/home/typing-2.jpg";
@@ -10,6 +10,7 @@ import {
   WebChatCustomElement,
   WebChatContainer,
   type WebChatConfig,
+  type WebChatInstance,
 } from "@ibm-watson/assistant-web-chat-react";
 
 const webChatOptions = {
@@ -25,24 +26,30 @@ const webChatOptions = {
 // the web chat "debug: true" configuration option which enables debugging within web chat.
 setEnableDebug(true);
 
-const onAfterRender = (instance, setInstance) => {
+const onAfterRender = (
+  instance: WebChatInstance,
+  setInstance: Dispatch<SetStateAction<WebChatInstance | null>>
+) => {
   // Make the instance available to the React components.
   setInstance(instance);
   instance.toggleOpen();
-  //  Automatically open the chat window
-  // instance.openWindow();
+
+  return Promise.resolve(); // Return a Promise<void>
+
 };
 
 // sm:h-[550px]
 const Landing = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [instance, setInstance] = useState(null);
+  const [instance, setInstance] = useState<WebChatInstance | null>(null);
 
-  const toggleWebChat = useCallback(() => {
-    instance.toggleOpen();
+  const toggleWebChat: () => void = useCallback(() => {
+    if (instance) { 
+      instance.toggleOpen();
+    }
   }, [instance]);
 
-  // console.log(instance)
+
   const LandingCardData = [
     {
       cardTitle: "Summary",
@@ -123,7 +130,12 @@ const Landing = () => {
           {/* IBM Watson Chat */}
           <div>
             {isMobile ? (
-              <WebChatContainer config={webChatOptions} onBeforeRender={setInstance} />
+              <WebChatContainer
+                config={webChatOptions}
+                onBeforeRender={
+                  setInstance as (instance: WebChatInstance) => Promise<void>
+                }
+              />
             ) : (
               <WebChatCustomElement
                 config={webChatOptions}
@@ -131,7 +143,9 @@ const Landing = () => {
                 onAfterRender={(instance) =>
                   onAfterRender(instance, setInstance)
                 }
-                onBeforeRender={setInstance}
+                onBeforeRender={
+                  setInstance as (instance: WebChatInstance) => Promise<void>
+                }
               />
             )}
           </div>
