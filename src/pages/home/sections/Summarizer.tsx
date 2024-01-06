@@ -112,7 +112,7 @@ const Summarizer = () => {
   return (
     <>
       <div
-        className="bg-orange-300 h-auto mt-28"
+        className="bg-orange-300 h-auto mb-28"
         id="data-law-summarizer"
       >
         <div className="max-w-screen-xl mx-auto px-4 py-16">
