@@ -14,9 +14,9 @@ import {
 } from "@ibm-watson/assistant-web-chat-react";
 
 const webChatOptions = {
-  integrationID: "db26a3d9-a552-4793-8587-b6a9e9b1093d",
+  integrationID: "6ba53abf-c108-44d7-8554-953fe978b02e",
   region: "au-syd",
-  serviceInstanceID: "0d36f010-ce52-4433-9e53-8e18218a3869",
+  serviceInstanceID: "4103320b-c436-4cec-afe0-f061e762bf17",
   // subscriptionID: 'only on enterprise plans',
   // Note that there is no onLoad property here. The WebChatContainer component will override it.
   // Use the onBeforeRender or onAfterRender prop instead.
