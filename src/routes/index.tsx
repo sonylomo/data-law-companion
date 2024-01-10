@@ -4,9 +4,10 @@ import Layout from "../components/Layout";
 import AboutUs from "../pages/aboutUs/AboutUs";
 import Compliance from "../pages/compliance/Compliance";
 import News from "../pages/news/News";
-import CaseStudies from '../pages/caseStudies/CaseStudies';
-import Blog from '../pages/news/sections/Blog';
-
+import CaseStudies from "../pages/caseStudies/CaseStudies";
+// import Blog from '../pages/news/sections/Blog';
+import BlogPost from "../pages/resources/Blog";
+import OnePost from "../components/resources/singlePost";
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +36,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/blog",
-        element: <Blog />,
+        element: <BlogPost />,
+      },
+      {
+        path: "/blog/:slug",
+        element: <OnePost />,
       },
     ],
   },
