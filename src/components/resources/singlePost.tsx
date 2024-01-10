@@ -1,18 +1,23 @@
-// src/components/OnePost.js
-
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { sanityClient } from "../../sanityClient";
-import BlockContent from "@sanity/block-content-to-react";
+import { PortableText } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
+import { BlogCardProps } from "../../types/index";
+import { components } from "./CustomComponents";
 
 const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
+function urlFor(source: {
+  asset: {
+    _id: string;
+    url: string;
+  };
+}) {
   return builder.image(source);
 }
 
 export default function OnePost() {
-  const [postData, setPostData] = useState(null);
+  const [postData, setPostData] = useState<BlogCardProps | null>(null);
   const { slug } = useParams();
   console.log("slug stuff: ", slug);
 
@@ -73,11 +78,9 @@ export default function OnePost() {
           />
         </div>
         <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
-          <BlockContent
-            blocks={postData.body}
-            projectId={sanityClient.projectId}
-            dataset={sanityClient.dataset}
-          />
+          {postData && (
+            <PortableText value={postData.body} components={components} />
+          )}
         </div>
       </div>
     </div>

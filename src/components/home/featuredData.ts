@@ -20,32 +20,32 @@ export const featuredData = [
     date: "05/01/2024",
     link: "https://www.businessdailyafrica.com/bd/corporate/technology/kenya-targets-more-online-content-for-takedown-4483300",
   },
-  {
-    tag: "News Release",
-    title:
-      "lorem ipsum ETFO is a social justice and equity seeking organization.",
-    date: "21/11/2023",
-    link: "",
-  },
-  {
-    tag: "News Release",
-    title:
-      "lorem ipsum ETFO is a social justice and equity seeking organization.",
-    date: "21/11/2023",
-    link: "",
-  },
-  {
-    tag: "News Release",
-    title:
-      "lorem ipsum ETFO is a social justice and equity seeking organization.",
-    date: "21/11/2023",
-    link: "",
-  },
-  {
-    tag: "News Release",
-    title:
-      "lorem ipsum ETFO is a social justice and equity seeking organization.",
-    date: "21/11/2023",
-    link: "",
-  },
+  // {
+  //   tag: "News Release",
+  //   title:
+  //     "lorem ipsum ETFO is a social justice and equity seeking organization.",
+  //   date: "21/11/2023",
+  //   link: "",
+  // },
+  // {
+  //   tag: "News Release",
+  //   title:
+  //     "lorem ipsum ETFO is a social justice and equity seeking organization.",
+  //   date: "21/11/2023",
+  //   link: "",
+  // },
+  // {
+  //   tag: "News Release",
+  //   title:
+  //     "lorem ipsum ETFO is a social justice and equity seeking organization.",
+  //   date: "21/11/2023",
+  //   link: "",
+  // },
+  // {
+  //   tag: "News Release",
+  //   title:
+  //     "lorem ipsum ETFO is a social justice and equity seeking organization.",
+  //   date: "21/11/2023",
+  //   link: "",
+  // },
 ];

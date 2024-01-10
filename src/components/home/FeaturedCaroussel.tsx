@@ -11,14 +11,19 @@ type FeaturedCarousselDataProps = {
 const FeaturedCaroussel = ({
   FeaturedCarousselData,
 }: FeaturedCarousselDataProps) => {
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
   const checkScrollPosition = () => {
     if (!carouselRef.current) return;
-    setIsAtStart(carouselRef.current.scrollLeft === 0);
-    setIsAtEnd(carouselRef.current.scrollLeft + carouselRef.current.offsetWidth >= carouselRef.current.scrollWidth);
+    else {
+      setIsAtStart(carouselRef.current.scrollLeft === 0);
+      setIsAtEnd(
+        carouselRef.current.scrollLeft + carouselRef.current.offsetWidth >=
+          carouselRef.current.scrollWidth
+      );
+    }
   };
 
   useEffect(() => {
@@ -26,13 +31,13 @@ const FeaturedCaroussel = ({
   }, []);
 
   const scrollLeft = () => {
-    carouselRef.current.scrollBy({ left: -384, behavior: "smooth" }); // adjust scroll amount as needed
-    checkScrollPosition();
+    if(carouselRef.current){carouselRef.current.scrollBy({ left: -384, behavior: "smooth" }); // adjust scroll amount as needed
+    checkScrollPosition();}
   };
 
   const scrollRight = () => {
-    carouselRef.current.scrollBy({ left: 384, behavior: "smooth" }); // adjust scroll amount as needed
-    checkScrollPosition();
+    if(carouselRef.current){carouselRef.current.scrollBy({ left: 384, behavior: "smooth" }); // adjust scroll amount as needed
+    checkScrollPosition();}
   };
 
   return (
