@@ -4,6 +4,7 @@ export type FeaturedData = {
   title: string;
   date: string;
   link: string;
+  image:string;
 };
 
 export type LandingCardData = {
@@ -80,4 +81,53 @@ export type ExpandCardProps = {
   country: string;
   description: string;
   source: string;
+};
+
+export type BlogCardProps = {
+  title: string;
+  slug: {
+    current: string;
+    _type: string;
+  };
+  mainImage: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+  };
+  body: {
+    _type: string;
+    _key: string;
+    style: string;
+    children: [];
+    markDefs: [];
+  }[];
+  name: string;
+  authorImage: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+  };
+};
+
+export type BlogPostType = {
+  title: string;
+  slug: {
+    current: string;
+    _type: string;
+  };
+  mainImage: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+  };
+  body?: {
+    _type: string;
+    _key: string;
+    style: string;
+    children: [];
+    markDefs: [];
+  }[];
 };

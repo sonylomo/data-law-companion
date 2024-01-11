@@ -33,14 +33,11 @@ const NewsCard = ({
           </p>
         </div>
         <div>
-          <a
-            href={`${body}`}
-            rel="noopener noreferrer"
-            target="_blank"
+          <p
             className="flex gap-16 items-center pb-3 px-6 hover:text-neutral-orange hover:underline"
           >
             Read more <BsArrowRight className="text-xl" />
-          </a>
+          </p>
         </div>
       </a>
     </div>

@@ -62,7 +62,7 @@ const Landing = () => {
     },
     {
       cardTitle: "Q&A Assitant",
-      cardBody: "Ask us anything on your country's Data Protection Act",
+      cardBody: "Ask us any information regarding the Data Protection Act",
       buttonText: "Try Q&A",
       image: typing,
       link: "#data-law-questions",
@@ -139,7 +139,7 @@ const Landing = () => {
             ) : (
               <WebChatCustomElement
                 config={webChatOptions}
-                className="md:w-[450px] md:h-[500px]"
+                className="md:w-[400px] md:h-[500px]"
                 onAfterRender={(instance) =>
                   onAfterRender(instance, setInstance)
                 }
