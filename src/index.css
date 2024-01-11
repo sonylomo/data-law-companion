@@ -152,9 +152,9 @@
     transition: right 500ms ease-in-out;
   }
 
-  /* #WACContainer.WACContainer .HideWebChat { 
+  #WACContainer.WACContainer .HideWebChat { 
   display: none;
-   }  */
+   } 
 
   #WACContainer.WACContainer .StartOpenAnimation {
     transition: none;
@@ -167,23 +167,5 @@
 
   #WACContainer.WACContainer .CloseAnimation {
     right: -500px;
-  }
-
-  /* hide close button on chat */
-  #WACContainer.WACContainer .WACHomeScreenHeader button.WAC__button--ghost {
-    display: none;
-  }
-
-  #WACContainer.WACContainer
-    .WACHeader
-    button.WAC__button--ghost[aria-label="Close the chat window"] {
-    display: none;
-  }
-
-  /* Hide open chat button */
-  #WACContainer.WACContainer
-    .WACLauncher__ButtonContainer.WACLauncher__ButtonContainer--round
-    .WACLauncher__Button:not(.WACLauncher__TourButton) {
-    display: none;
   }
 }
