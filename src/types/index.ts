@@ -4,6 +4,7 @@ export type FeaturedData = {
   title: string;
   date: string;
   link: string;
+  image:string;
 };
 
 export type LandingCardData = {
@@ -100,7 +101,7 @@ export type BlogCardProps = {
     style: string;
     children: [];
     markDefs: [];
-  }; 
+  }[];
   name: string;
   authorImage: {
     asset: {
@@ -122,4 +123,11 @@ export type BlogPostType = {
       url: string;
     };
   };
+  body?: {
+    _type: string;
+    _key: string;
+    style: string;
+    children: [];
+    markDefs: [];
+  }[];
 };

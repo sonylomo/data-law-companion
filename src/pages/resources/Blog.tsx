@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { sanityClient } from "../../sanityClient.ts";
 import BlogCard from "../../components/resources/BlogCard";
 import { BlogPostType } from "../../types/index";
+import BlogHero from '../../components/resources/BlogHero';
+// import HeroCard from "../../components/news/HeroCard"
 
 const BlogPost = () => {
   const [allPostsData, setAllPosts] = useState<BlogPostType[] | null>(null);
@@ -17,7 +19,8 @@ const BlogPost = () => {
                 _id,
                 url
                 }
-            }
+            },
+            body
           }`
       )
       .then((data: BlogPostType[]) => {
@@ -30,15 +33,15 @@ const BlogPost = () => {
     <div className="max-w-screen-xl mx-auto px-4 pt-4 pb-16 h-auto">
       <div className="max-w-screen-lg mx-auto">
         <h1 className="uppercase text-2xl sm:text-3xl font-semibold">
-          Featured Blogs
+          Featured Resource
         </h1>
-        {/* <HeroCard HeroCardProps={NewsData[0]} /> */}
+        {allPostsData && <BlogHero HeroCardProps={allPostsData[0]} />}
       </div>
 
       {/* search */}
-      {/* <h2 className="text-2xl max-w-screen-lg mx-auto">News Articles</h2> */}
+     {allPostsData && <h2 className="text-2xl max-w-screen-lg mx-auto pt-4">Articles <span className="text-neutral-red">( {allPostsData.length} )</span></h2>}
 
-      {/* <div className="border-t border-[#9DA0AC] w-full mt-10 mx-auto my-14" /> */}
+      <div className="border-t border-[#9DA0AC] w-full mx-auto my-10" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-4">
         {allPostsData &&
@@ -51,14 +54,3 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
-// {allPostsData &&
-//         allPostsData.map((post, index) => (
-//           <Link to={"/blog/" + post.slug.current} key={post.slug.current}>
-//             <span key={index}>
-//               <img src={post.mainImage.asset.url} alt="" />
-//               <span>
-//                 <h2>{post.title}</h2>
-//               </span>
-//             </span>
-//           </Link>
-//         ))}

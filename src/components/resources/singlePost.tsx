@@ -2,19 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { sanityClient } from "../../sanityClient";
 import { PortableText } from "@portabletext/react";
-import imageUrlBuilder from "@sanity/image-url";
 import { BlogCardProps } from "../../types/index";
-import { components } from "./CustomComponents";
-
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source: {
-  asset: {
-    _id: string;
-    url: string;
-  };
-}) {
-  return builder.image(source);
-}
+import { components, urlFor } from './CustomComponents';
 
 export default function OnePost() {
   const [postData, setPostData] = useState<BlogCardProps | null>(null);
@@ -73,7 +62,7 @@ export default function OnePost() {
           <img
             className="w-full object-cover rounded-t"
             src={urlFor(postData.mainImage).url()}
-            alt=""
+            alt={postData.title}
             style={{ height: "400px" }}
           />
         </div>

@@ -139,7 +139,7 @@ const Landing = () => {
             ) : (
               <WebChatCustomElement
                 config={webChatOptions}
-                className="md:w-[450px] md:h-[500px]"
+                className="md:w-[400px] md:h-[500px]"
                 onAfterRender={(instance) =>
                   onAfterRender(instance, setInstance)
                 }
