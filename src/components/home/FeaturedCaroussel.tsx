@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { FeaturedData } from "../../types";
-import sample from "../../assets/handshake.png";
+// import sample from "../../assets/handshake.png";
 import { FiExternalLink } from "react-icons/fi";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
@@ -39,8 +39,9 @@ const FeaturedCaroussel = ({
     if(carouselRef.current){carouselRef.current.scrollBy({ left: 384, behavior: "smooth" }); // adjust scroll amount as needed
     checkScrollPosition();}
   };
-
-  return (
+console.log(FeaturedCarousselData)
+  
+return (
     <section className="mx-auto w-full max-w-screen-2xl pl-4 relative">
       {!isAtStart && (
         <button
@@ -62,7 +63,7 @@ const FeaturedCaroussel = ({
           gridAutoColumns: "max-content",
         }}
       >
-        {FeaturedCarousselData.map(({ date, title, tag, link }) => (
+        {FeaturedCarousselData.map(({ date, title, tag, link, image }) => (
           <div
             key={crypto.randomUUID()}
             className=" scrollbar-hide rounded overflow-y-hidden relative after:block after:relative after:-mt-64 after:h-64 after:w-full after:content-[''] after:z-0 after:rounded-b after:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)]"
@@ -75,7 +76,7 @@ const FeaturedCaroussel = ({
             >
               <img
                 className=" w-96 h-80 object-cover items-center"
-                src={sample}
+                src={image}
                 alt={title}
               />
               <div className="absolute -translate-y-[85%] hover:-translate-y-[110%] inset-x-0 text-white text-left z-10 font-medium w-full p-3 space-y-6 transition-all ease-in-out duration-500">

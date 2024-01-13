@@ -5,7 +5,7 @@ const CTA = () => {
         Learn about the Data Protection Laws and how it safeguards your personal
         information.
       </p>
-      <p className="text-xl">Stay informed, stay secure</p>
+      <p className="text-xl">Stay Informed, Stay Compliant</p>
       <div>
         <a href="#data-law-summarizer" className="bg-neutral-orange py-2 px-4 rounded font-bold">
           Get Started

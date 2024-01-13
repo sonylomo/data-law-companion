@@ -108,11 +108,11 @@ const Landing = () => {
         >
           <div className="w-full space-y-4">
             <h1 className="text-5xl sm:text-6xl font-serif">
-              Welcome to <br />
-              Data Law Companion
+              Your Data<br />
+               Law Companion
             </h1>
             <h2 className="text-xl font-medium landing-text uppercase">
-              Stay informed, stay secure
+              Stay informed, stay compliant
             </h2>
             {/* <button className="py-2 px-6 rounded-md border border-neutral-orange transparent-bg w-48">
               Data Protection Summarizer
