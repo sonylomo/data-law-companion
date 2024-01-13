@@ -13,8 +13,8 @@ const Home = () => {
       {/* <SlideShow /> */}
       <Landing />
       {/* <CountryCard /> */}
-      <TabbedCountryCard />
       <Summarizer />
+      <TabbedCountryCard />
       <Featured />
       <FAQ />
       <CTA />

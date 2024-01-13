@@ -133,7 +133,7 @@ const TabbedCountryCard = () => {
   ];
 
   return (
-    <Tab.Group as="div" selectedIndex={selectedIndex} onChange={setSelectedIndex} className="mx-4">
+    <Tab.Group as="div" selectedIndex={selectedIndex} onChange={setSelectedIndex} className="mx-4" id="data-law-overview">
       <Tab.List className="flex flex-col sm:flex-row gap-6 justify-center mx-auto items-center mb-10 sm:mb-10 max-w-screen-xl">
         {CountryData.map(({ name, image }, idx) => {
           return (
@@ -165,7 +165,7 @@ const TabbedCountryCard = () => {
             key={crypto.randomUUID()}
             className={classNames(
               "bg-pale-orange shadow-lg rounded h-full py-8 px-6",
-              "ring-white/60 ring-offset-2 ring-offset-orange-300 focus:outline-none focus:ring-2  border border-orange-300"
+              "ring-white/60 ring-offset-2 ring-offset-orange-300 focus:outline-none focus:ring-2 border border-orange-300"
             )}
           >
             <div className="flex flex-col justify-between h-40 sm:h-full">

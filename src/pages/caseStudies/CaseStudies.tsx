@@ -1,17 +1,11 @@
 import NewsCard from "../../components/news/NewsCard";
 import { NewsData as NewsDataType } from "../../types/index";
 import banner from "../../assets/corporate.jpg";
-import bannerImg3 from "../../assets/caseStudies/mtn.png"
-import bannerImg1 from "../../assets/caseStudies/safeboda.png"
-import bannerImg2 from "../../assets/caseStudies/roma.png"
-import bannerImg4 from "../../assets/caseStudies/oppo.png"
-import bannerImg5 from "../../assets/caseStudies/regus.png"
-import bannerImg6 from "../../assets/caseStudies/mulla.png"
-import bannerImg7 from "../../assets/caseStudies/casavera.png"
+import { case1, case2, case3, case4, case5, case6, case7 } from "../../assets/caseStudies/";
 
 const CaseStudiesData: NewsDataType[] = [
   {
-    banner: bannerImg1,
+    banner: case1,
     title: "SafeBoda",
     id: 1,
     subheading:
@@ -19,7 +13,7 @@ const CaseStudiesData: NewsDataType[] = [
     body: "https://balogunharold.com/the-safeboda-data-privacy-breach-decision-some-considerations/",
   },
   {
-    banner: bannerImg2,
+    banner: case2,
     title: "Roma School",
     id: 2,
     subheading:
@@ -27,7 +21,7 @@ const CaseStudiesData: NewsDataType[] = [
     body: "https://www.the-star.co.ke/news/2023-09-26-school-fined-sh45m-for-using-minors-pictures-without-parental-consent/",
   },
   {
-    banner: bannerImg3,
+    banner: case3,
     title: "MTN Rwanda",
     id: 3,
     subheading:
@@ -35,7 +29,7 @@ const CaseStudiesData: NewsDataType[] = [
     body: "https://www.reuters.com/article/rwanda-telecoms-idUSL8N1IJ2IJ/ ",
   },
   {
-    banner: bannerImg4,
+    banner: case4,
     title: "Oppo Kenya",
     id: 4,
     subheading:
@@ -44,7 +38,7 @@ const CaseStudiesData: NewsDataType[] = [
   },
 
   {
-    banner: bannerImg5,
+    banner: case5,
     title: "Whitepath and Regus",
     id: 5,
     subheading:
@@ -52,7 +46,7 @@ const CaseStudiesData: NewsDataType[] = [
     body: "https://www.businessdailyafrica.com/bd/corporate/companies/whitepath-regus-slapped-with-sh5m-fine-for-breaching-data-laws-4196536",
   },
   {
-    banner: bannerImg6,
+    banner: case6,
     title: "Mulla Pride Ltd",
     id: 6,
     subheading:
@@ -60,7 +54,7 @@ const CaseStudiesData: NewsDataType[] = [
     body: "https://ntvkenya.co.ke/news/mobile-loans-firm-fined-for-accessing-borrowers-phone-books/",
   },
   {
-    banner: bannerImg7,
+    banner: case7,
     title: "Casa Vera Lounge",
     id: 7,
     subheading:

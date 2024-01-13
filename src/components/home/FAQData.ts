@@ -1,27 +1,32 @@
 export const FAQData = [
   {
-    question: "What is the Data Protection Act?",
+    question: "What are Data Protection Laws?",
     answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Data protection laws are regulations that govern the collection, processing, storage, and sharing of personal data to ensure the privacy and rights of individuals.",
   },
   {
-    question: "What is the Data Protection Act?",
+    question: "How many countries does the Data Law Companion support?",
     answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Our Data Law Companion currently supports 3 countries: Kenya, Uganda and Rwanda. However, we plan on expanding throughout Africa and abroad.",
   },
   {
-    question: "What is the Data Protection Act?",
+    question: "How can users contribute to or participate in the website's content?",
     answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Yes, you can submit articles to be published on the our blog.",
   },
   {
-    question: "What is the Data Protection Act?",
+    question: "Are there any networking or community engagement opportunities available through the site?",
     answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Yes, you could join discussions in any of our platforms or our meet up events.",
   },
   {
-    question: "What is the Data Protection Act?",
+    question: "What type of resources does the website offer?",
     answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "We have articles, case studies and legal documents to help users understand and navigate of data law protection.",
+  },
+  {
+    question: "Will the site provide some cases of data law breaches, Data Protection  decisions and the fines?",
+    answer:
+      "Yes, you can check out our Case Studies page for past cases.",
   },
 ];

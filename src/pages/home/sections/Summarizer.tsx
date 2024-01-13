@@ -112,12 +112,12 @@ const Summarizer = () => {
   return (
     <>
       <div
-        className="bg-orange-300 h-auto mt-28"
-        id="data-protection-summarizer"
+        className="bg-orange-300 h-auto mb-28"
+        id="data-law-summarizer"
       >
         <div className="max-w-screen-xl mx-auto px-4 py-16">
           <h2 className="font-bold text-2xl sm:text-4xl text-center my-6 text">
-            Data Protection Summarizer
+            Data Protection Law Summarizer
           </h2>
 
           <form

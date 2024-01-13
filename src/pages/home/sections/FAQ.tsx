@@ -5,7 +5,7 @@ import { FAQData } from "../../../components/home/FAQData";
 
 const FAQ = () => {
   return (
-    <div className="mt-0 sm:mt-6 pb-16 ">
+    <div className="mt-0 sm:mt-6 pb-16 " id="faq">
       <h2 className="font-bold text-2xl sm:text-4xl text-center pt-10">FAQ</h2>
 
       <div className="w-full px-4 pt-8">

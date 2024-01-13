@@ -40,7 +40,7 @@ const CountrySelector = () => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none">
+          <Listbox.Options className="z-10 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none">
             {Country.map((countryData) => (
               <Listbox.Option
                 key={crypto.randomUUID()}
@@ -108,7 +108,7 @@ const NavBar = () => {
           to="/"
           onClick={() => setShowNavlinks(false)}
         >
-          ✨ Data Protection Assistant
+          ✨ Data Law Companion
         </Link>
 
         <Link
@@ -145,7 +145,7 @@ const NavBar = () => {
           className="text-dark-grey hover:text-neutral-orange hover:underline focus:text-neutral-orange focus:underline transition-all duration-300 cursor-pointer"
           to="/"
         >
-          ✨ Data Protection Assistant
+          ✨ Data Law Companion
         </Link>
         <Link
           className="text-dark-grey hover:text-neutral-orange hover:underline transition-all duration-300 cursor-pointer focus:text-neutral-orange focus:underline"
