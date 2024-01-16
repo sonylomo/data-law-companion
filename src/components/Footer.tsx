@@ -1,4 +1,4 @@
-import logo from "../assets/react.svg";
+import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -76,10 +76,10 @@ const Footer = () => {
               <a href="/case-studies">Case Studies</a>
             </li>
             <li>
-              <a href="/blog">Blog</a>
+              <a href="/resources/blog">Blog</a>
             </li>
             <li>
-              <a href="/news">News</a>
+              <a href="/resources/blog">News</a>
             </li>
             <li>
               <a href="/#faq">FAQ</a>

@@ -1,11 +1,14 @@
 import { useState, Fragment, useEffect } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { Link } from "react-router-dom";
-import logo from "../assets/react.svg";
+import { Listbox, Transition, Menu } from "@headlessui/react";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/logo.svg";
 import { CgMenu } from "react-icons/cg";
 import { HiOutlineChevronUpDown } from "react-icons/hi2";
 import { BsCheck } from "react-icons/bs";
 import useCountry from "../hooks/useCountry";
+import { TbArrowGuide } from "react-icons/tb";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { GiBookshelf } from "react-icons/gi";
 
 const CountrySelector = () => {
   const { country, setCountry } = useCountry();
@@ -78,6 +81,140 @@ const CountrySelector = () => {
   );
 };
 
+const Resources = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="text-left">
+      <Menu
+        as="div"
+        className="relative inline-block text-left text-dark-grey hover:text-neutral-orange focus:text-neutral-orange "
+      >
+        <div>
+          <Menu.Button className="inline-flex w-full items-center justify-center bg-white hover:underline">
+            Resources
+            <MdOutlineKeyboardArrowDown
+              className="ml-2 h-5 w-5"
+              aria-hidden="true"
+            />
+          </Menu.Button>
+        </div>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="z-40 absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+            <div className="px-1 py-1 z-40">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-orange-300 text-white" : "text-dark-grey"
+                    } group flex w-full items-center rounded-md px-2 py-2 `}
+                    onClick={() => navigate("/resources/guidelines")}
+                  >
+                    <TbArrowGuide className="mr-2 h-5 w-5" />
+                    General Guidelines
+                  </button>
+                )}
+              </Menu.Item>
+              {/* <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-orange-300 text-white" : "text-dark-grey"
+                    } group flex w-full items-center rounded-md px-2 py-2 `}
+                  >
+                    {active ? (
+                      <DuplicateActiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <DuplicateInactiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    )}
+                    Opportunities & Grants
+                  </button>
+                )}
+              </Menu.Item> */}
+            </div>
+            <div className="px-1 py-1">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-orange-300 text-white" : "text-dark-grey"
+                    } group flex w-full items-center rounded-md px-2 py-2 `}
+                    onClick={() => navigate("/resources/blog")}
+                 
+                 >
+                    <GiBookshelf className="mr-2 h-5 w-5" aria-hidden="true" />
+                    Blog
+                  </button>
+                )}
+              </Menu.Item>
+              {/* <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-orange-300 text-white" : "text-dark-grey"
+                    } group flex w-full items-center rounded-md px-2 py-2 `}
+                  >
+                    {active ? (
+                      <MoveActiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <MoveInactiveIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    )}
+                    News
+                  </button>
+                )}
+              </Menu.Item> */}
+            </div>
+            {/* <div className="px-1 py-1">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-orange-300 text-white" : "text-dark-grey"
+                    } group flex w-full items-center rounded-md px-2 py-2 `}
+                  >
+                    {active ? (
+                      <DeleteActiveIcon
+                        className="mr-2 h-5 w-5 text-violet-400"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <DeleteInactiveIcon
+                        className="mr-2 h-5 w-5 text-violet-400"
+                        aria-hidden="true"
+                      />
+                    )}
+                    Ethics
+                  </button>
+                )}
+              </Menu.Item>
+            </div> */}
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    </div>
+  );
+};
+
 const NavBar = () => {
   const [showNavlinks, setShowNavlinks] = useState(false);
 
@@ -137,6 +274,9 @@ const NavBar = () => {
         >
           About Us
         </Link>
+        <div className="">
+          <Resources />
+        </div>
       </nav>
 
       {/* Desktop navlinks */}
@@ -171,6 +311,10 @@ const NavBar = () => {
         >
           About Us
         </Link>
+
+        <div className="">
+          <Resources />
+        </div>
       </nav>
 
       {/* Country Selector */}

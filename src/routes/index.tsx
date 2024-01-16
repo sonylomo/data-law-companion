@@ -8,7 +8,7 @@ import CaseStudies from "../pages/caseStudies/CaseStudies";
 // import Blog from '../pages/news/sections/Blog';
 import BlogPost from "../pages/resources/Blog";
 import OnePost from "../components/resources/singlePost";
-// import Guidelines from '../pages/resources/Guidelines';
+import Guidelines from '../pages/resources/Guidelines';
 
 export const router = createBrowserRouter([
   {
@@ -36,17 +36,17 @@ export const router = createBrowserRouter([
         element: <CaseStudies />,
       },
       {
-        path: "/blog",
+        path: "/resources/blog",
         element: <BlogPost />,
       },
       {
-        path: "/blog/:slug",
+        path: "/resources/blog/:slug",
         element: <OnePost />,
       },
-      // {
-      //   path: "/resources/guidelines",
-      //   element: <Guidelines />,
-      // },
+      {
+        path: "/resources/guidelines",
+        element: <Guidelines />,
+      },
     ],
   },
 ]);
