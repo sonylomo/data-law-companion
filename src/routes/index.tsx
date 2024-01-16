@@ -36,11 +36,11 @@ export const router = createBrowserRouter([
         element: <CaseStudies />,
       },
       {
-        path: "/blog",
+        path: "/resources/blog",
         element: <BlogPost />,
       },
       {
-        path: "/blog/:slug",
+        path: "/resources/blog/:slug",
         element: <OnePost />,
       },
       {

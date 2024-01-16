@@ -14,7 +14,7 @@ import { CarousselProps } from "../../types";
 
 export const TeamData: CarousselProps[] = [
   {
-    name: "Lawrence Nderu",
+    name: "Lawrence Nderu, PhD",
     title: "Principal Investigator",
     image: lawrence,
   },

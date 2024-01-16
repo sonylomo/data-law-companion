@@ -6,8 +6,10 @@ import { CgMenu } from "react-icons/cg";
 import { HiOutlineChevronUpDown } from "react-icons/hi2";
 import { BsCheck } from "react-icons/bs";
 import useCountry from "../hooks/useCountry";
-
+import { TbArrowGuide } from "react-icons/tb";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { GiBookshelf } from "react-icons/gi";
+
 const CountrySelector = () => {
   const { country, setCountry } = useCountry();
   const [selectedCountry, setSelectedCountry] = useState({ ...country });
@@ -116,22 +118,12 @@ const Resources = () => {
                     } group flex w-full items-center rounded-md px-2 py-2 `}
                     onClick={() => navigate("/resources/guidelines")}
                   >
-                    {active ? (
-                      <EditActiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <EditInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
+                    <TbArrowGuide className="mr-2 h-5 w-5" />
                     General Guidelines
                   </button>
                 )}
               </Menu.Item>
-              <Menu.Item>
+              {/* <Menu.Item>
                 {({ active }) => (
                   <button
                     className={`${
@@ -152,7 +144,7 @@ const Resources = () => {
                     Opportunities & Grants
                   </button>
                 )}
-              </Menu.Item>
+              </Menu.Item> */}
             </div>
             <div className="px-1 py-1">
               <Menu.Item>
@@ -161,23 +153,15 @@ const Resources = () => {
                     className={`${
                       active ? "bg-orange-300 text-white" : "text-dark-grey"
                     } group flex w-full items-center rounded-md px-2 py-2 `}
-                  >
-                    {active ? (
-                      <ArchiveActiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <ArchiveInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )}
+                    onClick={() => navigate("/resources/blog")}
+                 
+                 >
+                    <GiBookshelf className="mr-2 h-5 w-5" aria-hidden="true" />
                     Blog
                   </button>
                 )}
               </Menu.Item>
-              <Menu.Item>
+              {/* <Menu.Item>
                 {({ active }) => (
                   <button
                     className={`${
@@ -198,7 +182,7 @@ const Resources = () => {
                     News
                   </button>
                 )}
-              </Menu.Item>
+              </Menu.Item> */}
             </div>
             {/* <div className="px-1 py-1">
               <Menu.Item>
@@ -290,6 +274,9 @@ const NavBar = () => {
         >
           About Us
         </Link>
+        <div className="">
+          <Resources />
+        </div>
       </nav>
 
       {/* Desktop navlinks */}
@@ -339,225 +326,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-function EditInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="#EDE9FE"
-        stroke="#D4802E"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function EditActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 13V16H7L16 7L13 4L4 13Z"
-        fill="#FFFAED"
-        stroke="#990000"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function DuplicateInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 4H12V12H4V4Z"
-        fill="#EDE9FE"
-        stroke="#D4802E"
-        strokeWidth="2"
-      />
-      <path
-        d="M8 8H16V16H8V8Z"
-        fill="#EDE9FE"
-        stroke="#D4802E"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function DuplicateActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 4H12V12H4V4Z"
-        fill="#FFFAED"
-        stroke="#990000"
-        strokeWidth="2"
-      />
-      <path
-        d="M8 8H16V16H8V8Z"
-        fill="#FFFAED"
-        stroke="#990000"
-        strokeWidth="2"
-      />
-    </svg>
-  );
-}
-
-function ArchiveInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="8"
-        width="10"
-        height="8"
-        fill="#EDE9FE"
-        stroke="#D4802E"
-        strokeWidth="2"
-      />
-      <rect
-        x="4"
-        y="4"
-        width="12"
-        height="4"
-        fill="#EDE9FE"
-        stroke="#D4802E"
-        strokeWidth="2"
-      />
-      <path d="M8 12H12" stroke="#D4802E" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function ArchiveActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="8"
-        width="10"
-        height="8"
-        fill="#FFFAED"
-        stroke="#990000"
-        strokeWidth="2"
-      />
-      <rect
-        x="4"
-        y="4"
-        width="12"
-        height="4"
-        fill="#FFFAED"
-        stroke="#990000"
-        strokeWidth="2"
-      />
-      <path d="M8 12H12" stroke="#D4802E" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function MoveInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M10 4H16V10" stroke="#D4802E" strokeWidth="2" />
-      <path d="M16 4L8 12" stroke="#D4802E" strokeWidth="2" />
-      <path d="M8 6H4V16H14V12" stroke="#D4802E" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function MoveActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M10 4H16V10" stroke="#990000" strokeWidth="2" />
-      <path d="M16 4L8 12" stroke="#990000" strokeWidth="2" />
-      <path d="M8 6H4V16H14V12" stroke="#990000" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function DeleteInactiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="6"
-        width="10"
-        height="10"
-        fill="#EDE9FE"
-        stroke="#D4802E"
-        strokeWidth="2"
-      />
-      <path d="M3 6H17" stroke="#D4802E" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#D4802E" strokeWidth="2" />
-    </svg>
-  );
-}
-
-function DeleteActiveIcon(props) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="5"
-        y="6"
-        width="10"
-        height="10"
-        fill="#FFFAED"
-        stroke="#990000"
-        strokeWidth="2"
-      />
-      <path d="M3 6H17" stroke="#990000" strokeWidth="2" />
-      <path d="M8 6V4H12V6" stroke="#990000" strokeWidth="2" />
-    </svg>
-  );
-}

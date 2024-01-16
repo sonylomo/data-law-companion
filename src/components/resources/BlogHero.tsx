@@ -9,7 +9,7 @@ type HeroCardPropsType = {
 };
 
 const BlogHero = ({
-  HeroCardProps: { mainImage, title, body , slug},
+  HeroCardProps: { mainImage, title, body, slug },
 }: HeroCardPropsType) => {
   // const Truncate = (str: string) => {
   //   return str.substring(0, 200) + " ...";
@@ -18,7 +18,10 @@ const BlogHero = ({
   // console.log(body[0]);
 
   return (
-    <div className="flex flex-col sm:flex-row bg-pale-orange rounded-lg ml-0 sm:ml-4 my-4 justify-between py-4 shadow-lg">
+    <Link
+      to={`/resources/blog/${slug.current}`}
+      className="flex flex-col sm:flex-row bg-pale-orange rounded-lg ml-0 sm:ml-4 my-4 justify-between py-4 shadow-lg"
+    >
       <div className="relative sm:mx-auto flex justify-center items-center mx-4">
         <img
           // className="w-full object-cover rounded-t"
@@ -34,11 +37,9 @@ const BlogHero = ({
 
       <div className="flex flex-col items-left text-left space-y-2 px-4 py-3 sm:py-10 w-full sm:w-2/3">
         <p className="text-sm text-light-grey uppercase font-ight">latest</p>
-        <Link to={`/${slug}`}>
-          <h1 className="flex items-center gap-4 text-xl sm:text-2xl uppercase font-semibold hover:underline hover:cursor-pointer text-neutral-red">
-            {title}
-          </h1>
-        </Link>
+        <h1 className="flex items-center gap-4 text-xl sm:text-2xl uppercase font-semibold hover:underline hover:cursor-pointer text-neutral-red">
+          {title}
+        </h1>
         {/* <h2 className="text-xl sm:text-2xl font-medium text-dark-grey">
           {subheading}
         </h2> */}
@@ -48,7 +49,7 @@ const BlogHero = ({
           Read more <BsArrowRight />
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { sanityClient } from "../../sanityClient.ts";
 import BlogCard from "../../components/resources/BlogCard";
 import { BlogPostType } from "../../types/index";
-import BlogHero from '../../components/resources/BlogHero';
+import BlogHero from "../../components/resources/BlogHero";
 // import HeroCard from "../../components/news/HeroCard"
 
 const BlogPost = () => {
@@ -35,11 +35,18 @@ const BlogPost = () => {
         <h1 className="uppercase text-2xl sm:text-3xl font-semibold">
           Featured Resource
         </h1>
-        {allPostsData && <BlogHero HeroCardProps={allPostsData[0]} />}
+        {allPostsData && (
+          <BlogHero HeroCardProps={allPostsData[allPostsData.length - 1]} />
+        )}
       </div>
 
       {/* search */}
-     {allPostsData && <h2 className="text-2xl max-w-screen-lg mx-auto pt-4">Articles <span className="text-neutral-red">( {allPostsData.length} )</span></h2>}
+      {allPostsData && (
+        <h2 className="text-2xl max-w-screen-lg mx-auto pt-4">
+          Articles{" "}
+          <span className="text-neutral-red">( {allPostsData.length} )</span>
+        </h2>
+      )}
 
       <div className="border-t border-[#9DA0AC] w-full mx-auto my-10" />
 

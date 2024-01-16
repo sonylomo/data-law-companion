@@ -1,12 +1,11 @@
-import { img1, img2, img3 } from "../../assets/home/featured";
+import { img1, img2, img3, img4 } from "../../assets/home/featured";
 
 export const featuredData = [
   {
     tag: "Blog",
-    title:
-      "Harnessing the Power of LLMs to Democratize Data Protection Laws in East Africa",
-    date: "30/11/2023",
-    link: "https://dev.datalawcompanion.org/blog/harnessing-the-power-of-llms-to-democratize-data-protection-laws-in-east-africa",
+    title: "Data Ethics: What It Is, Why It Matters, and How to Implement It",
+    date: "16/01/2024",
+    link: "https://datalawcompanion.org/resources/blog/data-ethics-what-it-is-why-it-matters-and-how-to-implement-it",
     image: img1,
   },
   {
@@ -22,6 +21,14 @@ export const featuredData = [
     date: "05/01/2024",
     link: "https://www.businessdailyafrica.com/bd/corporate/technology/kenya-targets-more-online-content-for-takedown-4483300",
     image: img3,
+  },
+  {
+    tag: "Blog",
+    title:
+      "Harnessing the Power of LLMs to Democratize Data Protection Laws in East Africa",
+    date: "30/11/2023",
+    link: "https://datalawcompanion.org/resources/blog/harnessing-the-power-of-llms-to-democratize-data-protection-laws-in-east-africa",
+    image: img4,
   },
   // {
   //   tag: "News Release",
