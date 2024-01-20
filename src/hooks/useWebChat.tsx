@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { WebChatContext } from "../context/WebChat";
+import { WebChatContext, WebChatContextType } from "../context/WebChat";
 
 const useWebChat = () => useContext(WebChatContext);
 
-export default useWebChat;
+export default useWebChat as () => WebChatContextType;
