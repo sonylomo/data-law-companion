@@ -4,7 +4,7 @@ export type FeaturedData = {
   title: string;
   date: string;
   link: string;
-  image:string;
+  image: string;
 };
 
 export type LandingCardData = {
@@ -29,6 +29,7 @@ export type CarousselProps = {
   image: string;
   title: string;
   name: string;
+  link: string;
 };
 
 // Compliance Issues

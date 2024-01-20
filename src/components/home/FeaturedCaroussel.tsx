@@ -31,17 +31,20 @@ const FeaturedCaroussel = ({
   }, []);
 
   const scrollLeft = () => {
-    if(carouselRef.current){carouselRef.current.scrollBy({ left: -384, behavior: "smooth" }); // adjust scroll amount as needed
-    checkScrollPosition();}
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -384, behavior: "smooth" }); // adjust scroll amount as needed
+      checkScrollPosition();
+    }
   };
 
   const scrollRight = () => {
-    if(carouselRef.current){carouselRef.current.scrollBy({ left: 384, behavior: "smooth" }); // adjust scroll amount as needed
-    checkScrollPosition();}
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 384, behavior: "smooth" }); // adjust scroll amount as needed
+      checkScrollPosition();
+    }
   };
-console.log(FeaturedCarousselData)
-  
-return (
+
+  return (
     <section className="mx-auto w-full max-w-screen-2xl pl-4 relative">
       {!isAtStart && (
         <button
@@ -66,10 +69,10 @@ return (
         {FeaturedCarousselData.map(({ date, title, tag, link, image }) => (
           <div
             key={crypto.randomUUID()}
-            className=" scrollbar-hide rounded overflow-y-hidden relative after:block after:relative after:-mt-64 after:h-64 after:w-full after:content-[''] after:z-0 after:rounded-b after:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)]"
+            className="scrollbar-hide rounded overflow-y-hidden relative after:block after:relative after:-mt-64 after:h-64 after:w-full after:content-[''] after:z-0 after:rounded-b after:bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.5)_29.17%,_rgba(0,0,0,0.94)_97.92%)]"
           >
             <a
-              href={`${link}`}
+              href={link}
               rel="noopener noreferrer"
               target="_blank"
               className="hover:cursor-pointer"
