@@ -1,54 +1,23 @@
-import { useCallback, useState, useEffect, type SetStateAction, type Dispatch } from "react";
+import { useCallback } from "react";
 import LandingCard from "../../../components/home/LandingCard";
 import explain from "../../../assets/home/explain-min.jpg";
 import typing from "../../../assets/home/typing-2.jpg";
 import pen from "../../../assets/home/pen.jpg";
 import { BsArrowRight } from "react-icons/bs";
 import landing from "../../../assets/home/draft2.png";
-import {
-  setEnableDebug,
-  WebChatCustomElement,
-  WebChatContainer,
-  type WebChatConfig,
-  type WebChatInstance,
-} from "@ibm-watson/assistant-web-chat-react";
-
-const webChatOptions = {
-  integrationID: "6ba53abf-c108-44d7-8554-953fe978b02e",
-  region: "au-syd",
-  serviceInstanceID: "4103320b-c436-4cec-afe0-f061e762bf17",
-  // subscriptionID: 'only on enterprise plans',
-  // Note that there is no onLoad property here. The WebChatContainer component will override it.
-  // Use the onBeforeRender or onAfterRender prop instead.
-} as WebChatConfig;
-
-// Include this if you want to get debugging information from this library. Note this is different than
-// the web chat "debug: true" configuration option which enables debugging within web chat.
-setEnableDebug(true);
-
-const onAfterRender = (
-  instance: WebChatInstance,
-  setInstance: Dispatch<SetStateAction<WebChatInstance | null>>
-) => {
-  // Make the instance available to the React components.
-  setInstance(instance);
-  instance.toggleOpen();
-
-  return Promise.resolve(); // Return a Promise<void>
-
-};
+import useWebChat from "../../../hooks/useWebChat";
+// import { type WebChatInstance } from "@ibm-watson/assistant-web-chat-react";
 
 // sm:h-[550px]
 const Landing = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [instance, setInstance] = useState<WebChatInstance | null>(null);
+  // const [instance, setInstance] = useState<WebChatInstance | null>(null);
+  const { instance } = useWebChat();
 
   const toggleWebChat: () => void = useCallback(() => {
-    if (instance) { 
+    if (instance) {
       instance.toggleOpen();
     }
   }, [instance]);
-
 
   const LandingCardData = [
     {
@@ -78,18 +47,6 @@ const Landing = () => {
     },
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isMobile]);
-
   return (
     <>
       <div
@@ -108,8 +65,9 @@ const Landing = () => {
         >
           <div className="w-full space-y-4">
             <h1 className="text-5xl sm:text-6xl font-serif">
-              Your Data<br />
-               Law Companion
+              Your Data
+              <br />
+              Law Companion
             </h1>
             <h2 className="text-xl font-medium landing-text uppercase">
               Stay informed, stay compliant
@@ -128,27 +86,15 @@ const Landing = () => {
             )}
           </div>
           {/* IBM Watson Chat */}
-          <div>
-            {isMobile ? (
-              <WebChatContainer
-                config={webChatOptions}
-                onBeforeRender={
-                  setInstance as (instance: WebChatInstance) => Promise<void>
-                }
-              />
-            ) : (
-              <WebChatCustomElement
-                config={webChatOptions}
-                className="md:w-[400px] md:h-[500px]"
-                onAfterRender={(instance) =>
-                  onAfterRender(instance, setInstance)
-                }
-                onBeforeRender={
-                  setInstance as (instance: WebChatInstance) => Promise<void>
-                }
-              />
-            )}
-          </div>
+          {/* <div>
+            <WebChatContainer
+              config={webChatOptions}
+              onBeforeRender={
+                setInstance as (instance: WebChatInstance) => Promise<void>
+              }
+              onAfterRender={(instance) => onAfterRender(instance, setInstance)}
+            />
+          </div> */}
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center sm:items-start gap-6 mx-auto -translate-y-28">

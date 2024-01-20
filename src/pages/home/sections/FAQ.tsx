@@ -16,7 +16,7 @@ const FAQ = () => {
                 {({ open }) => (
                   <>
                     <div className="my-1 py-1">
-                      <Disclosure.Button className="flex w-full justify-between items-center rounded-lg bg-orange-300 px-4 py-2 text-left h-14 font-medium text-black hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-neutral-red/75">
+                      <Disclosure.Button className="flex w-full h-full justify-between items-center text-sm sm:text-base rounded-lg bg-orange-300 px-4 py-2 text-left font-medium text-black hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-neutral-red/75">
                         <p>
                           <span className="font-light">
                             {idx.toString().length === 1
@@ -25,11 +25,13 @@ const FAQ = () => {
                           </span>
                           . {question}
                         </p>
-                        {open ? (
-                          <BiMinus className="h-5 w-5 text-neutral-red" />
-                        ) : (
-                          <BsPlusLg className="h-5 w-5 text-neutral-red" />
-                        )}
+                        <span>
+                          {open ? (
+                            <BiMinus className="h-5 w-5 text-neutral-red" />
+                          ) : (
+                            <BsPlusLg className="h-5 w-5 text-neutral-red" />
+                          )}
+                        </span>
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pb-2 pt-4 bg-pale-orange text-light-grey">
                         {answer}

@@ -13,6 +13,7 @@ import { GiBookshelf } from "react-icons/gi";
 const CountrySelector = () => {
   const { country, setCountry } = useCountry();
   const [selectedCountry, setSelectedCountry] = useState({ ...country });
+
   const Country = [
     { code: "KE", name: "kenya", flag: "🇰🇪" },
     { code: "UG", name: "uganda", flag: "🇺🇬" },
@@ -154,8 +155,7 @@ const Resources = () => {
                       active ? "bg-orange-300 text-white" : "text-dark-grey"
                     } group flex w-full items-center rounded-md px-2 py-2 `}
                     onClick={() => navigate("/resources/blog")}
-                 
-                 >
+                  >
                     <GiBookshelf className="mr-2 h-5 w-5" aria-hidden="true" />
                     Blog
                   </button>

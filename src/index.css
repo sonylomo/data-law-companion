@@ -146,7 +146,7 @@
 /* display: none; */
 /* }  */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   #WACContainer.WACContainer .WebChatStyles {
     position: relative;
     transition: right 500ms ease-in-out;
@@ -168,4 +168,4 @@
   #WACContainer.WACContainer .CloseAnimation {
     right: -500px;
   }
-}
+} */
