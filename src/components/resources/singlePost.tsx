@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { sanityClient } from "../../sanityClient";
 import { PortableText } from "@portabletext/react";
 import { BlogCardProps } from "../../types/index";
-import { components, urlFor } from './CustomComponents';
+import { components, urlFor } from "./CustomComponents";
+import { TbExternalLink } from "react-icons/tb";
 
 export default function OnePost() {
   const [postData, setPostData] = useState<BlogCardProps | null>(null);
@@ -24,7 +25,9 @@ export default function OnePost() {
            },
          body,
         "name": author->name,
-        "authorImage": author->image
+        "authorImage": author->image,
+        source,
+        subheading
        }`,
         { slug }
       )
@@ -53,9 +56,9 @@ export default function OnePost() {
                 className="w-10 h-10 rounded-full"
                 alt="Author is Kap"
               /> */}
-                <h4 className="cursive flex items-center pl-2 text-2xl">
+                {!postData.source && <h4 className="cursive flex items-center pl-2 text-xl text-neutral-orange">
                   {postData.name}
-                </h4>
+                </h4>}
               </div>
             </div>
           </div>
@@ -66,9 +69,21 @@ export default function OnePost() {
             style={{ height: "400px" }}
           />
         </div>
+
         <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
           {postData && (
             <PortableText value={postData.body} components={components} />
+          )}
+
+          {postData.source && (
+            <a
+              href={postData.source}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="flex justify-start gap-2 items-center pb-3  text-neutral-orange hover:text-neutral-red hover:underline  hover:cursor-pointer"
+            >
+              source <TbExternalLink />
+            </a>
           )}
         </div>
       </div>
