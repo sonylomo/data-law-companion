@@ -1,3 +1,4 @@
+import million from "million/compiler";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
@@ -5,8 +6,9 @@ import { VitePWA } from "vite-plugin-pwa";
 // https://vitejs.dev/config/
 export default defineConfig({
   // base: "https://dev.datalawcompanion.org/",
-  base:"https://datalawcompanion.org/",
+  base: "https://datalawcompanion.org/",
   plugins: [
+    million.vite({ auto: true }),
     react(),
     VitePWA({
       registerType: "autoUpdate",
@@ -45,7 +47,6 @@ export default defineConfig({
             type: "image/png",
             purpose: "maskable",
           },
-     
         ],
         background_color: "#d4802e",
         display: "standalone",
