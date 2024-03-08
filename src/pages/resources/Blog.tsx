@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { sanityClient } from "../../sanityClient.ts";
 import BlogCard from "../../components/resources/BlogCard";
-import { BlogPostType } from "../../types/index";
+import { BlogPostType } from "../../types/";
 import BlogHero from "../../components/resources/BlogHero";
 // import HeroCard from "../../components/news/HeroCard"
 
@@ -11,7 +11,7 @@ const BlogPost = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"  && "blog" in categories[]->title]{
             title,
             slug,
             mainImage{

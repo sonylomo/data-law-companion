@@ -110,6 +110,8 @@ export type BlogCardProps = {
       url: string;
     };
   };
+  // subheading?: string;
+  source?: string;
 };
 
 export type BlogPostType = {
@@ -131,4 +133,6 @@ export type BlogPostType = {
     children: [];
     markDefs: [];
   }[];
+  subheading?: string;
+  source?: string;
 };
