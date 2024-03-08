@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { sanityClient } from "../../sanityClient.ts";
 import NewsCard from "../../components/news/NewsCard";
-import { NewsData as NewsDataType, BlogPostType } from "../../types/";
+import { BlogPostType } from "../../types/";
 import banner from "../../assets/corporate.jpg";
-import ExpandCard from "../../components/caseStudies/ExpandCard";
+// import ExpandCard from "../../components/caseStudies/ExpandCard";
 // import {
 //   case1,
 //   case2,

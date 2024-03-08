@@ -111,7 +111,7 @@ export type BlogCardProps = {
     };
   };
   // subheading?: string;
-  // source?: string;
+  source?: string;
 };
 
 export type BlogPostType = {

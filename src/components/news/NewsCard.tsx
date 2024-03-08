@@ -1,9 +1,9 @@
 // import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { NewsData } from "../../types";
+import { BlogPostType } from "../../types";
 
 type NewsCardPropsType = {
-  NewsCardProps: Omit<NewsData, "id">;
+  NewsCardProps: Omit<BlogPostType, "id">;
 };
 
 const NewsCard = ({ NewsCardProps }: NewsCardPropsType) => {
