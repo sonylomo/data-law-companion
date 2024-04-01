@@ -9,7 +9,6 @@ import { TbExternalLink } from "react-icons/tb";
 export default function OnePost() {
   const [postData, setPostData] = useState<BlogCardProps | null>(null);
   const { slug } = useParams();
-  console.log("slug stuff: ", slug);
 
   useEffect(() => {
     sanityClient
@@ -33,7 +32,7 @@ export default function OnePost() {
       )
       .then((data) => {
         setPostData(data[0]);
-        console.log(data[0]);
+        // console.log(data[0]);
       })
       .catch(console.error);
   }, [slug]);
@@ -51,14 +50,16 @@ export default function OnePost() {
                 {postData.title}
               </h2>
               <div className="flex justify-center text-gray-800">
-                {/* <img
-                src={urlFor(postData.authorImage).url()}
-                className="w-10 h-10 rounded-full"
-                alt="Author is Kap"
-              /> */}
-                {!postData.source && <h4 className="cursive flex items-center pl-2 text-xl text-neutral-orange">
-                  {postData.name}
-                </h4>}
+                <img
+                  src={urlFor(postData.authorImage).url()}
+                  className="w-10 h-10 rounded-full object-cover"
+                  alt={postData.name}
+                />
+                {!postData.source && (
+                  <h4 className="cursive flex items-center pl-2 text-xl text-neutral-orange">
+                    {postData.name}
+                  </h4>
+                )}
               </div>
             </div>
           </div>

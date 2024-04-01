@@ -11,17 +11,18 @@ const BlogPost = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"  && "blog" in categories[]->title]{
+        `*[_type == "post" && "blog" in categories[]->title] | order(_createdAt desc) {
             title,
             slug,
-            mainImage{
+            mainImage {
                 asset->{
-                _id,
-                url
+                    _id,
+                    url
                 }
             },
             body
-          }`
+        }
+`
       )
       .then((data: BlogPostType[]) => {
         setAllPosts(data);
@@ -36,7 +37,7 @@ const BlogPost = () => {
           Featured Resource
         </h1>
         {allPostsData && (
-          <BlogHero HeroCardProps={allPostsData[allPostsData.length - 1]} />
+          <BlogHero HeroCardProps={allPostsData[0]} />
         )}
       </div>
 

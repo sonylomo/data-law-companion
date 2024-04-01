@@ -1,8 +1,8 @@
 import { createClient } from "@sanity/client";
 
 // type SanityClient = {
-//   projectId: string, 
-//   dataset: string, 
+//   projectId: string,
+//   dataset: string,
 //   apiVersion: string,
 //   useCdn: boolean,
 // }

@@ -1,10 +1,17 @@
 // Home Page
 export type FeaturedData = {
-  tag: string;
+  publishedAt: string;
   title: string;
-  date: string;
-  link: string;
-  image: string;
+  source: string;
+  mainImage: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+  };
+  slug: {
+    current: string;
+  }
 };
 
 export type LandingCardData = {
