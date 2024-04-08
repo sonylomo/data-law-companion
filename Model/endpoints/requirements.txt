@@ -6,3 +6,10 @@ pypdf
 chromadb
 tiktoken
 transformers
+Chroma
+TextLoader
+PyPDFLoader
+langchain 
+CharacterTextSplitter
+ConversationalRetrievalChain
+RecursiveCharacterTextSplitter
