@@ -1,27 +1,35 @@
-# React + TypeScript + Vite
+# 👩🏾‍⚖️ Data Law Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Progressive Web Application that utilizes a Large Language Models (LLM) to create a comprehensive and  interactive resource for Data Protection Laws for Kenya, Rwanda and Uganda.
 
-Currently, two official plugins are available:
+## 🛠️ Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: User Interface library
+- **TypeScript**: The primary programming language
+- **Vite**: A new generation bundler
+- **Tailwind CSS**: UI styling framework
+- **Pnpm**: Package management
 
-## Expanding the ESLint configuration
+## 🤔 What Does This Web Application Do?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This web application is designed to make Data Law Protection information more accessible to the general public.
 
-- Configure the top-level `parserOptions` property like this:
+These are the main features:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+✅ **Data Protection Summarizer**: This tool takes lengthy data protection laws and summarizes them into digestible points. It helps users understand complex legal jargon in a simplified manner.
+
+ ✅ **Q&A Chatbot**: This is an interactive feature that allows users to ask questions and receive answers in real-time. The chatbot is programmed to understand and respond to common queries related to data protection laws.
+
+## 🚀 Set-up the app
+
+Follow these steps to get the app running in development mode:
+
+
+```bash
+git clone https://github.com/sonylomo/data-law-companion-web.git
+cd data-law-companion-web
+pnpm install
+pnpm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The app should be running at http://localhost:5173
